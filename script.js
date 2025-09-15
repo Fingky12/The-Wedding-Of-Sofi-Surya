@@ -35,3 +35,20 @@ const timer = setInterval(function() {
         "Harap isi semua data!";
     }
     });
+
+
+    // Animasi Fade-In Saat Scroll
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // supaya animasi cuma sekali
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(fader => {
+  observer.observe(fader);
+});

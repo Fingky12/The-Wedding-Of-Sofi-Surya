@@ -84,6 +84,19 @@ body {
 .slides img {
     width: 100%;
 }
+
+/* Animasi Fade-In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes slide {
     0% { transform: translateX(0); }
     33% { transform: translateX(-100%); }
