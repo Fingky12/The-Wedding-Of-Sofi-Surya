@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url('assets/bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    background: rgba(0,0,0,0.5);
+    padding: 50px 20px;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffdde1;
+}
+.hero h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+/* Countdown */
+.countdown {
+    margin: 30px 0;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    margin: 30px;
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #ff6f91;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn:hover {
+    background: #ff5773;
+}
+
+/* Gallery */
+.gallery {
+    margin: 40px 20px;
+}
+.slider {
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.slides {
+    display: flex;
+    width: 90%;
+    animation: steps() 22s infinite;
+}
+.slides img {
+    width: 100%;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* RSVP */
+.rsvp {
+    margin: 40px 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 15px;
+}
+.rsvp input, .rsvp select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+#rsvpResult {
+    margin-top: 15px;
+    font-weight: bold;
+}
