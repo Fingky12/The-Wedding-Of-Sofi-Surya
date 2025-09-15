@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
 
 * {
     margin: 0;
@@ -7,188 +8,115 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: url('assets/bg.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-/* Hero */
-.hero {
-    background: rgba(175, 0, 0, 0.5);
-    padding: 50px 20px;
-}
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-.hero h2 {
-    font-size: 2em;
-    margin: 10px 0;
-    color: #fdd052;
-}
-
-/* Countdown */
-.countdown {
-    margin: 30px 0;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 15px;
-    display: inline-block;
-}
-#timer {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* Content */
-.content {
-    margin: 30px;
-    background: rgba(255,255,255,0.2);
-    padding: 30px;
-    border-radius: 20px;
-}
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #ff6f91;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.btn:hover {
-    background: #ff5773;
-}
-
-/* Gallery */
-.gallery {
-    margin: 40px 20px;
-}
-.slider {
-    overflow: hidden;
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-.slides {
+    background-color: rgb(236, 236, 236);
     display: flex;
-    width: 90%;
-    animation: slide 22s infinite;
+    justify-content: center;
 }
-.slides img {
+
+.hal1{
+    min-width: 30%;
+    height: 922px;
+    background: url('assets/04.webp');
+
+}
+
+.backdrop {
     width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.4);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    padding: 120px 0;
 }
 
-/* Animasi Fade-In */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-270%); }
-    100% { transform: translateX(0); }
-}
-
-/* RSVP */
-/* RSVP */
-.rsvp {
-    margin: 40px auto;
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    backdrop-filter: blur(8px);
-}
-
-.rsvp h2 {
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    color: #ff3d77;
-}
-
-.rsvp form {
+.judul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-
-.rsvp input, 
-.rsvp select {
-    width: 90%;
-    padding: 12px 15px;
-    margin: 8px 0;
-    border: 1px solid rgba(255, 130, 130, 0.4);
-    border-radius: 10px;
-    font-size: 1em;
-    background: rgba(255,255,255,0.2);
-    color: rgb(199, 199, 199);
-    outline: none;
-    transition: 0.3s;
-}
-
-.rsvp input::placeholder {
-    color: #ddd;
-}
-
-.rsvp input:focus,
-.rsvp select:focus {
-    border-color: #ff6f91;
-    background: rgba(255,255,255,0.3);
-}
-
-/* Tombol RSVP */
-.rsvp button {
-    width: 95%;
-    margin-top: 15px;
-    padding: 14px;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #ff6f91, #ff9671);
-    color: rgb(255, 246, 246);
-    font-weight: bold;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out, background 0.3s;
-}
-
-.rsvp button:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #ff5773, #ff7f50);
-}
-
-#rsvpResult {
-    margin-top: 15px;
-    font-weight: bold;
+.judul h6 {
     color: #fff;
-    font-size: 1.1em;
-    background: rgba(0,0,0,0.3);
-    padding: 10px;
-    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 
-/* Responsif */
-@media (max-width: 600px) {
-    .rsvp {
-        width: 90%;
-        padding: 20px 15px;
-    }
-    .rsvp h2 {
-        font-size: 1.5em;
+.judul p {
+    position: relative;
+    bottom: 10px;
+    font-size: 80px;
+    font-family: "Luxurious Script", cursive;
+    color: rgb(253, 193, 102);
+}
+
+.undangan {
+    margin-top: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+        color: #fff;
+}
+
+.undangan span {
+    font-size: 40px;
+    margin-bottom: 26px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 131, 99);
+    padding: 10px 20px;
+    margin: 0 190px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.3);
+}
+
+
+a:hover {
+    position: relative;
+    top: 2px;
+    text-decoration: underline;
+    background: #fff;
+    color: rgb(255, 168, 96);
+}
+
+ /* Animasi umum */
+.mymove {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s ease forwards;
+}
+
+.mymove2 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s ease forwards;
+}
+
+.mymove3 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.5s ease forwards;
+}
+
+/* Tambah delay biar muncul bertahap */
+.judul { animation-delay: 0.3s; }
+.undangan { animation-delay: 0.6s; }
+
+
+/* Keyframes animasi */
+@keyframes slideUp {
+    to {
+    opacity: 1;
+    transform: translateY(0);
     }
 }
