@@ -16,18 +16,18 @@ body {
 
 /* Hero */
 .hero {
-    background: rgba(0,0,0,0.5);
+    background: rgba(175, 0, 0, 0.5);
     padding: 50px 20px;
 }
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #ffdde1;
+    color: #ffffff;
 }
 .hero h2 {
     font-size: 2em;
     margin: 10px 0;
-    color: #fff;
+    color: #fdd052;
 }
 
 /* Countdown */
@@ -79,7 +79,7 @@ body {
 .slides {
     display: flex;
     width: 90%;
-    animation: steps() 22s infinite;
+    animation: slide 22s infinite;
 }
 .slides img {
     width: 100%;
@@ -87,25 +87,95 @@ body {
 @keyframes slide {
     0% { transform: translateX(0); }
     33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
+    66% { transform: translateX(-270%); }
     100% { transform: translateX(0); }
 }
 
 /* RSVP */
+/* RSVP */
 .rsvp {
-    margin: 40px 20px;
-    background: rgba(0,0,0,0.5);
-    padding: 30px;
-    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
 }
-.rsvp input, .rsvp select {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+
+.rsvp h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #ff3d77;
+}
+
+.rsvp form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rsvp input, 
+.rsvp select {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid rgba(255, 130, 130, 0.4);
+    border-radius: 10px;
+    font-size: 1em;
+    background: rgba(255,255,255,0.2);
+    color: rgb(199, 199, 199);
+    outline: none;
+    transition: 0.3s;
+}
+
+.rsvp input::placeholder {
+    color: #ddd;
+}
+
+.rsvp input:focus,
+.rsvp select:focus {
+    border-color: #ff6f91;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Tombol RSVP */
+.rsvp button {
+    width: 95%;
+    margin-top: 15px;
+    padding: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff6f91, #ff9671);
+    color: rgb(255, 246, 246);
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
 }
+
+.rsvp button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff5773, #ff7f50);
+}
+
 #rsvpResult {
     margin-top: 15px;
     font-weight: bold;
+    color: #fff;
+    font-size: 1.1em;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .rsvp {
+        width: 90%;
+        padding: 20px 15px;
+    }
+    .rsvp h2 {
+        font-size: 1.5em;
+    }
 }
