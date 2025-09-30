@@ -11,27 +11,37 @@ body {
     background: url('assets/background.jpg') no-repeat center center fixed;
     display: flex;
     justify-content: center;
-    background-size: cover;   /* biar full */
-    overflow: hidden;         /* body ga bisa scroll */
+    background-size: cover;   /* biar full */        /* body ga bisa scroll */
     width: 100vw;
     height: 100vh;
     font-family: "Poppins", sans-serif;
+}
+.foto img {
+    width: 150px;
+    padding-bottom: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 6% auto;
+    margin: 4% auto;
     padding: 10% auto;
     background: rgb(204, 81, 81, .95);
     width: 1000px;
     height: 5000px;
-    border-radius: 40px;
+    border-radius: 20px;
+}
+
+.hal-pertama {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 7% auto;
 }
 
 h3 {
-    background: blue;
+    
 }
