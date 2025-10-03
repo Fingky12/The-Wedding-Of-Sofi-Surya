@@ -36,3 +36,43 @@ const zoomOnScroll = new IntersectionObserver((entries, observer) => {
 
 zooms.forEach(zoom => zoomOnScroll.observe(zoom));
 sliders.forEach(slide => slideOnScroll.observe(slide));
+
+// Countdown Timer dengan Lingkaran
+const targetDate = new Date("2026-03-28 10:00:00").getTime();
+const radius = 45;
+const circumference = 2 * Math.PI * radius;
+
+function setProgress(circle, value) {
+    const offset = circumference - (value * circumference);
+    circle.style.strokeDashoffset = offset;
+    circle.style.strokeDasharray = circumference;
+}
+
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "<h2>Acara Dimulai 🎉</h2>";
+        return;
+    }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Update angka
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+  // Update progress lingkaran
+    setProgress(document.getElementById("daysCircle"), days / 365);
+    setProgress(document.getElementById("hoursCircle"), hours / 24);
+    setProgress(document.getElementById("minutesCircle"), minutes / 60);
+    setProgress(document.getElementById("secondsCircle"), seconds / 60);
+
+}, 1000);
