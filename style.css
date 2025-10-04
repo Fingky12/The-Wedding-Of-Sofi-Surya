@@ -171,7 +171,7 @@ p {
     justify-content: center;
     gap: 15px;
     flex-wrap: nowrap;   /* biar tetep horisontal */
-    margin: 20px 0 40px;
+    margin: 20px 0 100px;
     cursor: default;
 }
 
@@ -220,6 +220,29 @@ p {
     color: var(--c);
 }
 
+.kata-Kata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 4% 0 -3% 0;
+}
+
+.kata-Kata h3 {
+    font-size: 1.5rem;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.kata-Kata p {
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto 40px auto;
+    padding: 0;
+    line-height: 1.6;
+}
+
 .frame {
     width: 325px;
     height: 350px;
@@ -243,7 +266,7 @@ p {
     padding: 0;
 }
 
-.frame h2 {
+.tab h2 {
     position: relative;
     top: -150px;
     font-size: 45px;
@@ -253,20 +276,19 @@ p {
     font-weight: 400;
 }
 
-.frame h3 {
+.tab h3 {
     position: relative;
     top: -140px;
     font-size: 20px;
     font-family: "Merriweather", serif;
     color: var(--c);
-    margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: 800;
     font-optical-sizing: auto;
 }
 
-.frame p {
+.tab p {
     position: relative;
-    top: -130px;
+    top: -150px;
     font-size: 15px;
     color: var(--c);
     line-height: 1.6;
@@ -313,6 +335,15 @@ p {
     margin: 7% 0 -3% 0;
 }
 
+.jadwal h1 {
+    font-size: 4rem;
+    font-family: "Carattere", cursive;
+    color: var(--c);
+    margin: 10px 0 40px 0;
+    font-weight: 500;
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
 .acara {
     display: flex;
     align-items: center;
@@ -325,8 +356,8 @@ p {
 }
 
 .card {
-    width: 300px;
-    height: 350px;
+    width: 330px;
+    height: 380px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     border: 1px solid rgba(124, 62, 39, 0.384);
@@ -339,6 +370,14 @@ p {
     padding: 20px;
 }
 
+.card span {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
 .card h2 {
     font-size: 2.5rem;
     font-family: "Carattere", cursive;
@@ -348,7 +387,7 @@ p {
 }
 
 .card p {
-    font-size: .85rem;
+    font-size: .95rem;
     color: #7a4e3e;
     line-height: 1.6;
     margin: 3px 0 0 0;
@@ -357,7 +396,7 @@ p {
 }
 
 .card .bx {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #7a4e3e;
     margin-bottom: 5px;
 }
