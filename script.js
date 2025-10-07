@@ -76,3 +76,10 @@ const countdown = setInterval(() => {
     setProgress(document.getElementById("secondsCircle"), seconds / 60);
 
 }, 1000);
+
+
+document.getElementById("save").addEventListener("click", () => {
+    document.querySelector(".hal2").scrollIntoView({
+        behavior: "smooth"  // biar scroll halus
+    });
+});
