@@ -56,11 +56,12 @@ h4 {
 }
 
 h5 {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 400;
     font-family: "Carattere", cursive;
     color: var(--c);
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
 }
 
 p {
@@ -347,7 +348,7 @@ a {
     margin-bottom: 40px;
 }
 
-.card {
+.acara-card {
     width: 330px;
     height: 380px;
     background: rgba(255, 255, 255, 0.5);
@@ -362,7 +363,7 @@ a {
     padding: 20px;
 }
 
-.card span {
+.acara-card span {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -370,15 +371,16 @@ a {
     margin-bottom: 5px;
 }
 
-.card h2 {
+.acara-card h2 {
     font-size: 2.5rem;
     font-family: "Carattere", cursive;
     color: var(--c);
     font-weight: 500;
     margin-bottom: 20px;
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
-.card p {
+.acara-card p {
     font-size: .95rem;
     color: var(--c);
     line-height: 1.6;
@@ -387,7 +389,7 @@ a {
     text-align: center;
 }
 
-.card .bx {
+.acara-card .bx {
     font-size: 2.2rem;
     color: var(--c);
     margin-bottom: 5px;
@@ -418,6 +420,11 @@ a {
     border-radius: 20px;
 }
 
+.qs-ar-rum h5 {
+    margin: 30px 0 10px 0;
+    font-size: 3rem;
+}
+
 .qs-ar-rum {
     font-size: 20px;
     font-style: italic;
@@ -431,6 +438,100 @@ a {
     margin: 15px 0;
 }
 
+.gallery-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-section h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--c);
+    font-weight: 300;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+    scrollbar-width: none; /* hilangin scrollbar di desktop */
+}
+
+.gallery::-webkit-scrollbar {
+  display: none; /* hilangin scrollbar di chrome */
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 160px;
+    overflow: hidden;
+    scroll-snap-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    font-size: 1.8rem;
+    background: none;
+    cursor: pointer;
+    color: rgba(231, 231, 231, 0.774);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s;
+    z-index: 10;
+}
+
+.scroll-btn:hover {
+    color: rgba(255, 255, 255);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
 
 /* Responsive kecilin aja lingkaran di HP */
 @media (max-width: 768px) {
@@ -440,6 +541,11 @@ a {
     }
     .label span {
         font-size: 1rem;
+    }
+
+    .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
     }
 }
 

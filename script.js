@@ -83,3 +83,33 @@ document.getElementById("save").addEventListener("click", () => {
         behavior: "smooth"  // biar scroll halus
     });
 });
+
+
+// Galeri
+const gallery = document.querySelector('.gallery');
+const cards = document.querySelectorAll('.card');
+const leftBtn = document.querySelector('.scroll-btn.left');
+const rightBtn = document.querySelector('.scroll-btn.right');
+
+// Scroll tombol kiri kanan
+rightBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+leftBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+// Animasi muncul pas terlihat
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+
