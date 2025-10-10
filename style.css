@@ -69,7 +69,7 @@ p {
     color: var(--c);
     line-height: 1.6;
     margin-bottom: 5rem;
-    padding: 0 12%;
+    padding: 0 10%;
 }
 
 a {
@@ -402,6 +402,7 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 20px 0;
 }
 
 .map {
@@ -438,100 +439,119 @@ a {
     margin: 15px 0;
 }
 
-.gallery-section {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 90%;
-    overflow: hidden;
-    position: relative;
-}
-
-.gallery-section h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: var(--c);
-    font-weight: 300;
-}
-
 .gallery-container {
+    max-width: 900px;
+    width: 80%;
+    text-align: center;
+}
+
+.gallery-container h1 {
+    font-size: 4rem;
+    font-family: "Carattere", cursive;
+    color: var(--c);
+    margin: 10px 0 40px 0;
+    font-weight: 500;
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-container p {
+    margin: 10px 0 60px 0;
+}
+
+/* SLIDER */
+.slider-wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.gallery {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    padding: 20px;
-    scrollbar-width: none; /* hilangin scrollbar di desktop */
-}
-
-.gallery::-webkit-scrollbar {
-  display: none; /* hilangin scrollbar di chrome */
-}
-
-.card {
-    flex: 0 0 auto;
-    width: 250px;
-    height: 160px;
     overflow: hidden;
-    scroll-snap-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    opacity: 0;
-    transform: scale(0.8);
 }
 
-.card img {
+.slider {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
     width: 100%;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
+    margin: 0 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.scroll-btn {
+/* BUTTONS */
+.nav {
     position: absolute;
     top: 50%;
+    color: var(--c);
     transform: translateY(-50%);
-    border: none;
-    font-size: 1.8rem;
     background: none;
+    border: none;
+    font-size: 28px;
     cursor: pointer;
-    color: rgba(231, 231, 231, 0.774);
+    border-radius: 50%;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+.nav:hover {
+    color: #fff;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* DOTS */
+.dots {
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: background 0.3s ease, transform 0.2s;
-    z-index: 10;
+    gap: 10px;
+    margin: 15px 7px 25px;
 }
 
-.scroll-btn:hover {
-    color: rgba(255, 255, 255);
-    transform: translateY(-50%) scale(1.1);
+.dots button {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.scroll-btn.left {
-    left: 10px;
+.dots button.active {
+    background: var(--c);
 }
 
-.scroll-btn.right {
-    right: 10px;
+/* GRID BAWAH */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
 }
 
+.grid-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .slide {
+        flex: 0 0 calc(100% / 2);
+    }
+    .slide img {
+        height: 220px;
+    }
+}
 
 /* Responsive kecilin aja lingkaran di HP */
 @media (max-width: 768px) {
@@ -542,10 +562,14 @@ a {
     .label span {
         font-size: 1rem;
     }
-
-    .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    .slide {
+    flex: 0 0 100%;
+    }
+    .slide img {
+        height: 200px;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -556,5 +580,8 @@ a {
     }
     .label span {
         font-size: 0.9rem;
+    }
+    .gallery-grid {
+    grid-template-columns: 1fr;
     }
 }

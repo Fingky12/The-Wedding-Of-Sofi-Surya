@@ -84,32 +84,56 @@ document.getElementById("save").addEventListener("click", () => {
     });
 });
 
+const slider = document.getElementById('slider');
+const dotsContainer = document.getElementById('dots');
+const images = slider.querySelectorAll('img');
 
-// Galeri
-const gallery = document.querySelector('.gallery');
-const cards = document.querySelectorAll('.card');
-const leftBtn = document.querySelector('.scroll-btn.left');
-const rightBtn = document.querySelector('.scroll-btn.right');
+let currentIndex = 0;
 
-// Scroll tombol kiri kanan
-rightBtn.addEventListener('click', () => {
-    gallery.scrollBy({ left: 300, behavior: 'smooth' });
+// Buat dots sesuai jumlah gambar
+images.forEach((_, i) => {
+    const dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
 });
 
-leftBtn.addEventListener('click', () => {
-    gallery.scrollBy({ left: -300, behavior: 'smooth' });
+// Fungsi ke slide tertentu
+function goToSlide(index) {
+    currentIndex = index;
+    const scrollAmount = images[index].offsetLeft - slider.offsetLeft;
+    slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    updateDots();
+}
+
+// Update warna dot aktif
+function updateDots() {
+    dotsContainer.querySelectorAll('button').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+    });
+}
+
+// Tombol prev/next
+document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    goToSlide(currentIndex);
+    });
+document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    goToSlide(currentIndex);
 });
 
-// Animasi muncul pas terlihat
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        } else {
-            entry.target.classList.remove('active');
+// Update dot saat di-scroll manual
+slider.addEventListener('scroll', () => {
+    let closest = 0;
+    let minDiff = Infinity;
+    images.forEach((img, i) => {
+        const diff = Math.abs(slider.scrollLeft - img.offsetLeft);
+        if (diff < minDiff) {
+        minDiff = diff;
+        closest = i;
         }
     });
-}, { threshold: 0.2 });
-
-cards.forEach(card => observer.observe(card));
-
+    currentIndex = closest;
+    updateDots();
+});
