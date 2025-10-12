@@ -137,3 +137,52 @@ slider.addEventListener('scroll', () => {
     currentIndex = closest;
     updateDots();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const splash = document.getElementById("splash");
+    const mainContent = document.getElementById("mainContent");
+    const openBtn = document.getElementById("openBtn");
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
+    const musicIcon = document.getElementById("musicIcon");
+
+  // Kunci scroll saat splash tampil
+    document.body.style.overflow = "hidden";
+
+    openBtn.addEventListener("click", () => {
+        // Hilangkan splash screen
+        splash.style.opacity = "0";
+        splash.style.visibility = "hidden";
+
+        setTimeout(() => {
+        splash.style.display = "none";
+        mainContent.classList.remove("hidden");
+        mainContent.classList.add("show");
+
+        // Buka scroll
+        document.body.style.overflow = "auto";
+
+        // Mulai musik
+        music.play().catch(() => {
+            console.log("Musik belum bisa diputar otomatis, tunggu interaksi user");
+        });
+
+        // Tampilkan tombol musik
+        musicBtn.classList.remove("hidden");
+        }, 1000);
+    });
+
+  // Tombol toggle musik (mute/unmute)
+    let isPlaying = true;
+    musicBtn.addEventListener("click", () => {
+        if (isPlaying) {
+            music.pause();
+            musicIcon.className = "bx bx-stop";
+        } else {
+            music.play();
+            musicIcon.className = "bx bx-headphone";
+        }
+        isPlaying = !isPlaying;
+    });
+});

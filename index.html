@@ -8,7 +8,32 @@
   <title>The Wedding of Surya & Sofi</title>
 </head>
 <body >
-  <div class="container">
+  <div id="splash" class="splash-screen">
+    <div class="splash-content">
+      <h5><b>The Wedding Of</b></h5>
+      <h1>Surya & Sofi</h1>
+      <h3>Sabtu, 28 Maret 2026</h3>
+      <h4>Kepada Yth : Bapak/Ibu/Saudara/i</h4>
+      <p class="nama-tamu">Nama Tamu</p>
+      <p>Mohon maaf apabila ada kesalahan penulisan nama, gelar dan alamat. <br>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Berhadir Di Acara Pernikahan Kami.</p>
+      <button id="openBtn">Buka Undangan</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="mainContent">
+
+    <!-- Musik -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tombol Musik (untuk mute/unmute) -->
+<button id="musicBtn" class="music-btn hidden" aria-label="Toggle background music" title="Toggle background music">
+  <i id="musicIcon" class='bx bx-headphone'></i>
+</button>
+
+
+
     <div class="hal-pertama" id="hal1">
       <div class="title">
         <img src="assets/png/cincin.png" alt="ring-wedding" class="slide-bottom">
@@ -18,7 +43,7 @@
       <div class="ornamen">
         <div class="save-the-date slide-bottom">
           <a href="#" id="save">Save The Date</a>
-          <h2>Sabtu, 25 Desember 2026</h2>
+          <h2>Sabtu, 28 Maret 2026</h2>
         </div>
         <div class="zoom-in" id="countdown">
           <div class="circle">
