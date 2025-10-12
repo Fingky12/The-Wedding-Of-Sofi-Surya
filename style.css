@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bebas+Neue&family=Carattere&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Imperial+Script&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Luxurious+Script&family=Merriweather:opsz,wght@18..144,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tangerine:wght@400;700&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 
 :root {
     --c: #86450f; /* coklat */
@@ -114,7 +116,7 @@ a {
     left: 0;
     width: 100%;
     height: 100dvh;
-    background: rgba(184, 107, 77, 0.562);
+    background: rgba(255, 255, 255, 0.877);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,34 +128,36 @@ a {
 
 .splash-content h1 {
     font-family: "Carattere", cursive;
-    font-size: 9rem;
-    color: #ffffff;
+    font-size: 12rem;
+    color: var(--c);
     margin: 0.5rem 0;
 }
 
 .splash-content p {
-    font-size: 2rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    color: var(--c);
     margin: 0.25rem 0;
 }
 
 .splash-content .nama-tamu {
     font-size: 4.5rem;
-    color: #ffffff;
+    color: var(--c);
     margin: 0.5rem 0 1rem 0;
     font-weight: bold;
 }
 
 .splash-content button {
     background: #70320c;
-    color: white;
+    color: var(--bg);
     border: none;
     padding: 12px 24px;
     border-radius: 25px;
     font-size: 1.2rem;
+    /* font-weight: bold; */
     cursor: pointer;
-    margin-top: 1rem;
+    margin-top: 3rem;
     transition: background 0.3s;
+    font-family: "Source Serif 4", serif;
 }
 
 .splash-content button:hover {
@@ -165,12 +169,12 @@ a {
 .splash-content h3 {
     font-weight: bold;
     font-size: 32px;
-    color: white;
+    color: var(--c);
     margin: 80px 0 10px 0;
 }
 
 .splash-content h4 {
-    color: white;
+    color: var(--c);
     font-size: 30px;
     margin: 10px 0 5px 0;
 }
@@ -184,11 +188,14 @@ a {
 /* Tombol Musik */
 .music-btn {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background: rgba(112, 50, 12, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     border-radius: 50%;
@@ -200,7 +207,7 @@ a {
 
 .music-btn:hover {
     transform: scale(1.1);
-    background: rgba(112, 50, 12, 1);
+    background: rgba(0, 0, 0);
 }
 
 .container {
@@ -241,7 +248,7 @@ a {
 }
 
 .title h1 {
-    margin: 50px 0 170px 0;
+    margin: 50px 0 150px 0;
 }
 
 .save-the-date {
@@ -282,6 +289,106 @@ a {
     width: 350px;
     margin: 10px 0 10px 0;
 }
+
+.amplop-section {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.title-amplop {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #3f3d56;
+    margin-bottom: 10px;
+}
+
+.desc-amplop {
+    font-size: 16px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bank-card {
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 25px;
+    width: 480px;
+    height: 270px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+}
+
+.bank-logo {
+    width: 90px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.nomor {
+    font-size: 14px;
+    color: #555;
+    margin-top: 40px;
+}
+
+.rekening {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 5px 0 10px;
+}
+
+.nama {
+    font-weight: bold;
+    color: #222;
+}
+
+.tanggal {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.footer-amplop {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    margin-top: 40px;
+    color: #3f3d56;
+}
+
+.btn-copy {
+    background: #63c76a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-copy:hover {
+    background: #56b65d;
+}
+
+.btn-copy.copied {
+    background: #2e7d32;
+}
+
+.btn-copy.copied::after {
+    content: " ✓";
+}
+
 
 #countdown {
     display: flex;
@@ -439,13 +546,20 @@ a {
     width: 100%;
 }
 
-.jadwal h1 {
+.jadwal h5 {
     font-size: 4rem;
-    font-family: "Carattere", cursive;
+    font-family: 'Great Vibes', cursive;
     color: var(--c);
     margin: 10px 0 40px 0;
     font-weight: 500;
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.jadwal p {
+    font-size: 1.3rem;
+    color: var(--c);
+    padding: 0 12%;
+    line-height: 1.6;
 }
 
 .acara {
@@ -483,7 +597,7 @@ a {
 
 .acara-card h2 {
     font-size: 2.5rem;
-    font-family: "Carattere", cursive;
+    font-family: 'Great Vibes', cursive;
     color: var(--c);
     font-weight: 500;
     margin-bottom: 20px;
@@ -532,6 +646,7 @@ a {
 }
 
 .qs-ar-rum h5 {
+    font-family: 'Great Vibes', cursive;
     margin: 30px 0 10px 0;
     font-size: 3rem;
 }
@@ -557,7 +672,7 @@ a {
 
 .gallery-container h1 {
     font-size: 4rem;
-    font-family: "Carattere", cursive;
+    font-family: 'Great Vibes', cursive;
     color: var(--c);
     margin: 10px 0 40px 0;
     font-weight: 500;

@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
             music.pause();
-            musicIcon.className = "bx bx-stop";
+            musicIcon.className = "bx bx-pause";
         } else {
             music.play();
             musicIcon.className = "bx bx-headphone";
@@ -186,3 +186,30 @@ document.addEventListener("DOMContentLoaded", () => {
         isPlaying = !isPlaying;
     });
 });
+
+// ambil semua tombol salin
+const copyButtons = document.querySelectorAll(".btn-copy");
+
+copyButtons.forEach((btn) => {
+    btn.addEventListener("click", async () => {
+        const noRek = btn.getAttribute("data-rek");
+
+        try {
+        await navigator.clipboard.writeText(noRek);
+
+        // ubah tulisan tombol
+        const originalText = btn.textContent;
+        btn.textContent = "✓ Disalin";
+        btn.classList.add("copied");
+
+        // kembalikan lagi setelah 2 detik
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove("copied");
+        }, 2000);
+        } catch (err) {
+        console.error("Gagal menyalin:", err);
+        }
+    });
+});
+
