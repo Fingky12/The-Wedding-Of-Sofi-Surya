@@ -56,23 +56,23 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 1rem;
     font-family: "Source Serif 4", serif;
     color: var(--c);
     font-weight: 400;
 }
 
 h5 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
-    font-family: "Carattere", cursive;
+    font-family: 'Great Vibes', cursive;
     color: var(--c);
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 1.1rem;
     color: var(--c);
     line-height: 1.6;
     margin-bottom: 5rem;
@@ -290,23 +290,26 @@ a {
     margin: 10px 0 10px 0;
 }
 
-.amplop-section {
-    padding: 60px 20px;
-    background: #fff;
+.amplop-digital {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0% auto;
+    padding: 30px 0;
 }
 
 .title-amplop {
     font-family: 'Great Vibes', cursive;
-    font-size: 42px;
-    color: #3f3d56;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    color: var(--c);
+    margin-bottom: 20px;
 }
 
 .desc-amplop {
-    font-size: 16px;
-    color: #444;
-    max-width: 700px;
-    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    color: var(--c);
+    margin: 0 auto 10%;
     line-height: 1.6;
 }
 
@@ -317,9 +320,13 @@ a {
 }
 
 .bank-card {
-    background: #f7f7f7;
+    background: linear-gradient(
+        to top right,
+        rgb(236, 192, 141) 10%, 
+        #f8d9b1 50%, 
+        rgb(255, 209, 172) 100%);
     border-radius: 15px;
-    padding: 25px;
+    padding: 2px;
     width: 480px;
     height: 270px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -335,27 +342,48 @@ a {
 }
 
 .nomor {
-    font-size: 14px;
-    color: #555;
+    font-size: 17px;
+    color: rgb(75, 55, 0);
     margin-top: 40px;
+    position: relative;
+    top: 47px;
 }
 
 .rekening {
+    position: relative;
+    bottom: 40px;
     font-size: 22px;
     font-weight: bold;
-    letter-spacing: 2px;
-    margin: 5px 0 10px;
+    letter-spacing: 3px;
 }
 
-.nama {
+.label-nama {
+    position: relative;
+    bottom: 132px;
+    font-size: 17px;
+    color: rgb(75, 55, 0);
+}
+
+.nama-rekening {
+    position: relative;
+    bottom: 220px;
+    font-size: 22px;
     font-weight: bold;
-    color: #222;
+    color: var(--c);
 }
 
 .tanggal {
-    margin-top: 10px;
-    font-size: 14px;
+    position: relative;
+    font-size: 15px;
     color: #444;
+    left: 60%;
+    bottom: 365px;
+}
+
+.tanggal span {
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--c);
 }
 
 .footer-amplop {
@@ -369,12 +397,15 @@ a {
     background: #63c76a;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 9px 25px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     margin-top: 5px;
     transition: all 0.2s ease;
+    position: relative;
+    left: 78%;
+    bottom: 65%;
 }
 
 .btn-copy:hover {
@@ -542,8 +573,6 @@ a {
 }
 
 .jadwal h5 {
-    font-size: 4rem;
-    font-family: 'Great Vibes', cursive;
     color: var(--c);
     margin: 10px 0 40px 0;
     font-weight: 500;
