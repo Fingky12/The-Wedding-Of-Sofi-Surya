@@ -213,3 +213,26 @@ copyButtons.forEach((btn) => {
     });
 });
 
+
+  // Ambil parameter dari URL
+    const params = new URLSearchParams(window.location.search);
+    const namaTamu = params.get("guest");
+
+    if (namaTamu) {
+    // Decode karakter URL dan trim spasi berlebih
+    let nama = decodeURIComponent(namaTamu.trim());
+
+    // Biar huruf depan tiap kata kapital, tanpa ganggu huruf sambung kayak "bin", "dan"
+        nama = nama
+        .split(' ')
+        .map(kata => {
+            // Kata-kata kecil tertentu gak perlu kapital
+            const kecil = ['dan', 'bin', 'binti', 'of', 'the', 'de'];
+            return kecil.includes(kata.toLowerCase())
+            ? kata.toLowerCase()
+            : kata.charAt(0).toUpperCase() + kata.slice(1).toLowerCase();
+        })
+        .join(' ');
+
+    document.getElementById("namaTamu").textContent = nama;
+    }

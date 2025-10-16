@@ -6,6 +6,7 @@
     --c: #86450f; /* coklat */
     --bg: #f3f3f3; /* abu-abu muda */
     --silver: #505050; /* silver */
+    --g: #ffbb00;
 }
 
 * {
@@ -34,7 +35,6 @@ body {
     overflow: hidden;
 }
 
-
 h1 {
     font-size: 95px;
     font-family: "Carattere", cursive;
@@ -49,21 +49,18 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
     font-family: "Source Serif 4", serif;
     color: var(--c);
     font-weight: 400;
 }
 
 h4 {
-    font-size: 1rem;
     font-family: "Source Serif 4", serif;
     color: var(--c);
     font-weight: 400;
 }
 
 h5 {
-    font-size: 4rem;
     font-weight: 400;
     font-family: 'Great Vibes', cursive;
     color: var(--c);
@@ -72,9 +69,7 @@ h5 {
 }
 
 p {
-    font-size: 1.1rem;
     color: var(--c);
-    line-height: 1.6;
     margin-bottom: 5rem;
     padding: 0 10%;
 }
@@ -116,7 +111,7 @@ a {
     left: 0;
     width: 100%;
     height: 100dvh;
-    background: rgba(255, 255, 255, 0.877);
+    background: rgba(112, 1, 1, 0.877);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,36 +121,58 @@ a {
     transition: opacity 1s ease, visibility 1s ease;
 }
 
+.splash-content .ornamen-batas {
+    width: 400px;
+    margin: 0 auto;
+}
+
 .splash-content h1 {
     font-family: "Carattere", cursive;
-    font-size: 12rem;
-    color: var(--c);
+    font-size: 8rem;
+    color: var(--g);
     margin: 0.5rem 0;
+    text-shadow: 0px 10px 4px rgba(255, 255, 255, 0.25);
+}
+
+.splash-content h5 {
+    font-size: 5rem;
+    color: var(--g);
+    text-shadow: 0px 7px 3px rgba(255, 255, 255, 0.25);
+}
+
+.splash-content h4 {
+    font-size: 1rem;
+    color: var(--g);
+    margin: 0.5rem 0 1rem 0;
+}
+.splash-content h3 {
+    font-size: 3rem;
+    color: var(--g);
+    margin: 0.5rem 0 1rem 0;
 }
 
 .splash-content p {
-    font-size: 1.5rem;
-    color: var(--c);
+    font-size: 1.2rem;
+    color: var(--g);
     margin: 0.25rem 0;
 }
 
 .splash-content .nama-tamu {
     font-size: 4.5rem;
-    color: var(--c);
+    color: var(--g);
     margin: 0.5rem 0 1rem 0;
     font-weight: bold;
 }
 
 .splash-content button {
-    background: #70320c;
-    color: var(--bg);
+    background: var(--g);
+    color: var(--c);
     border: none;
-    padding: 12px 24px;
+    padding: 6px 19px;
     border-radius: 25px;
     font-size: 1.2rem;
-    /* font-weight: bold; */
     cursor: pointer;
-    margin-top: 3rem;
+    margin-top: 2.3rem;
     transition: background 0.3s;
     font-family: "Source Serif 4", serif;
 }
@@ -169,12 +186,12 @@ a {
 .splash-content h3 {
     font-weight: bold;
     font-size: 32px;
-    color: var(--c);
+    color: var(--g);
     margin: 80px 0 10px 0;
 }
 
 .splash-content h4 {
-    color: var(--c);
+    color: var(--g);
     font-size: 30px;
     margin: 10px 0 5px 0;
 }
