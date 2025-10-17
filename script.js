@@ -214,25 +214,14 @@ copyButtons.forEach((btn) => {
 });
 
 
-  // Ambil parameter dari URL
+    // ambil parameter "guest" dari URL
     const params = new URLSearchParams(window.location.search);
-    const namaTamu = params.get("guest");
+    const guest = params.get("guest");
 
-    if (namaTamu) {
-    // Decode karakter URL dan trim spasi berlebih
-    let nama = decodeURIComponent(namaTamu.trim());
+    const guestName = document.getElementById("guest-name");
 
-    // Biar huruf depan tiap kata kapital, tanpa ganggu huruf sambung kayak "bin", "dan"
-        nama = nama
-        .split(' ')
-        .map(kata => {
-            // Kata-kata kecil tertentu gak perlu kapital
-            const kecil = ['dan', 'bin', 'binti', 'of', 'the', 'de'];
-            return kecil.includes(kata.toLowerCase())
-            ? kata.toLowerCase()
-            : kata.charAt(0).toUpperCase() + kata.slice(1).toLowerCase();
-        })
-        .join(' ');
-
-    document.getElementById("namaTamu").textContent = nama;
+    if (guest) {
+      // decode nama agar bisa menampilkan spasi atau simbol dari URL
+        const decodedName = decodeURIComponent(guest);
+        guestName.textContent = `${decodedName}`;
     }
