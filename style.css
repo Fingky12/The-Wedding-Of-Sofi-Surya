@@ -62,7 +62,6 @@ h4 {
 
 h5 {
     font-weight: 400;
-    font-family: 'Great Vibes', cursive;
     color: var(--c);
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
@@ -84,6 +83,7 @@ a {
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .slide-bottom.show {
     opacity: 1;
     transform: translateY(0);
@@ -130,38 +130,66 @@ a {
     font-family: "Carattere", cursive;
     font-size: 8rem;
     color: var(--g);
-    margin: 0.5rem 0;
-    text-shadow: 0px 10px 4px rgba(255, 255, 255, 0.25);
+    margin: 0.5rem 0 4rem 0;
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 .splash-content h5 {
-    font-size: 5rem;
+    font-size: 1.5rem;
     color: var(--g);
-    text-shadow: 0px 7px 3px rgba(255, 255, 255, 0.25);
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
 }
 
 .splash-content h4 {
-    font-size: 1rem;
+    position: relative;
+    top: 3rem;
+    font-size: 1.1rem;
     color: var(--g);
     margin: 0.5rem 0 1rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
 }
 .splash-content h3 {
-    font-size: 3rem;
+    position: relative;
+    top: 6rem;
+    font-size: 1.5rem;
     color: var(--g);
     margin: 0.5rem 0 1rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
 }
 
 .splash-content p {
     font-size: 1.2rem;
     color: var(--g);
     margin: 0.25rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
 }
 
 .splash-content .nama-tamu {
-    font-size: 4.5rem;
+    font-size: 3rem;
     color: var(--g);
     margin: 0.5rem 0 1rem 0;
     font-weight: bold;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content .ob1 {
+    position: relative;
+    top: 2rem;
+    width: 20rem;
+    color: var(--g);
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content .ob2 {
+    position: relative;
+    bottom: 2rem;
+    width: 20rem;
+    color: var(--g);
+}
+
+.splash-content .guest {
+    position: relative;
+    top: 2rem;
 }
 
 .splash-content button {
@@ -175,31 +203,12 @@ a {
     margin-top: 2.3rem;
     transition: background 0.3s;
     font-family: "Source Serif 4", serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.267);
 }
 
 .splash-content button:hover {
     background: white;
     color: var(--c);
-}
-
-
-.splash-content h3 {
-    font-weight: bold;
-    font-size: 32px;
-    color: var(--g);
-    margin: 80px 0 10px 0;
-}
-
-.splash-content h4 {
-    color: var(--g);
-    font-size: 30px;
-    margin: 10px 0 5px 0;
-}
-
-.splash-content h5 {
-    font-family: "Source Serif 4", serif;
-    font-size: 32px;
-    margin: 0 0 20px 0;
 }
 
 /* Tombol Musik */
@@ -319,12 +328,14 @@ a {
 .title-amplop {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5rem;
+    font-weight: 300;
     color: var(--c);
     margin-bottom: 20px;
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 .desc-amplop {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--c);
     margin: 0 auto 10%;
     line-height: 1.6;
@@ -590,10 +601,12 @@ a {
 }
 
 .jadwal h5 {
+    font-size: 3rem;
     color: var(--c);
     margin: 10px 0 40px 0;
     font-weight: 500;
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
+    font-family: 'Great Vibes', cursive;
 }
 
 .jadwal p {
@@ -688,7 +701,7 @@ a {
 
 .qs-ar-rum h5 {
     font-family: 'Great Vibes', cursive;
-    margin: 30px 0 10px 0;
+    margin: 30px 0 20px 0;
     font-size: 3rem;
 }
 
@@ -712,16 +725,16 @@ a {
 }
 
 .gallery-container h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'Great Vibes', cursive;
     color: var(--c);
-    margin: 10px 0 40px 0;
+    margin: 5px 0 20px 0;
     font-weight: 500;
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 .gallery-container p {
-    margin: 10px 0 60px 0;
+    margin: 10px 0 50px 0;
 }
 
 /* SLIDER */
