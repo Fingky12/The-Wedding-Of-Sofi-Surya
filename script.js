@@ -213,7 +213,6 @@ copyButtons.forEach((btn) => {
     });
 });
 
-
     // ambil parameter "guest" dari URL
     const params = new URLSearchParams(window.location.search);
     const guest = params.get("guest");
@@ -221,7 +220,6 @@ copyButtons.forEach((btn) => {
     const guestName = document.getElementById("guest-name");
 
     if (guest) {
-      // decode nama agar bisa menampilkan spasi atau simbol dari URL
-        const decodedName = decodeURIComponent(guest);
-        guestName.textContent = `${decodedName}`;
+        // decode nama agar bisa menampilkan spasi atau simbol dari URL
+        guestName.textContent = decodeURIComponent(guest);
     }
