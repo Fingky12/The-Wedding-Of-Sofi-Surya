@@ -134,7 +134,10 @@
       </div>
     </div>
     <div class="map zoom-in">
-      <iframe class="venue-map" title="Venue location map" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d305.01697558336514!2d111.87669819883962!3d-7.262149147845087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e1!4m0!4m3!3m2!1d-7.2622332!2d111.8768628!5e1!3m2!1sid!2sid!4v1761309856669!5m2!1sid!2sid" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+      <iframe class="venue-map" title="Venue location map" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d305.01697558336514!2d111.87669819883962!3d-7.262149147845087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e1!4m0!4m3!3m2!1d-7.2622332!2d111.8768628!5e1!3m2!1sid!2sid!4v1761309856669!5m2!1sid!2sid"
+            width="600" 
+            height="350" 
+            loading="lazy" allowfullscreen></iframe>
     </div>
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
     <div class="kata-kata zoom-in">
@@ -201,10 +204,48 @@
             <p class="label-nama">Atas Nama</p>
             <p class="nama-rekening">Surya Ongky Saputra</p>
           </div>
+
+              <!-- SeaBank -->
+          <div class="bank-card">
+            <img src="assets/img/seabank.png" alt="BCA" class="bank-logo">
+            <p class="nomor">Nomor Rekening</p>
+            <p class="rekening">6723016482</p>
+            <button class="btn-copy" data-rek="6723016482">Salin</button>
+            <p class="label-nama">Atas Nama</p>
+            <p class="nama-rekening">Surya Ongky Saputra</p>
+          </div>
         </div>
-        <h3 class="footer-amplop">Surya & Sofi</h3>
       </div>
     </div>
+    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
+    <div class="hal-lima">
+      <div class="comment-box">
+        <h3 class="text-center">Komentar & Kehadiran</h3>
+
+        <!-- Rangkuman Kehadiran -->
+        <div class="summary">
+          <div class="hadir" id="countHadir">0 Hadir</div>
+          <div class="tidak" id="countTidak">0 Tidak Hadir</div>
+          <div class="ragu" id="countRagu">0 Masih Ragu</div>
+        </div>
+
+        <!-- Form input -->
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Nama..." />
+          <textarea id="message" rows="3" placeholder="Tulis ucapan..."></textarea>
+          <select id="status" aria-label="Konfirmasi Kehadiran">
+            <option value="">Konfirmasi Kehadiran</option>
+            <option value="Hadir">✅ Hadir</option>
+            <option value="Tidak Hadir">❌ Tidak Hadir</option>
+            <option value="Masih Ragu">🤔 Masih Ragu</option>
+          </select>
+          <button class="btn-komen" onclick="addComment()">Kirim</button>
+        </div>
+
+        <div id="comments"></div>
+      </div>
+    </div>
+    
   </div>
   <script src="script.js"></script>
 </body>

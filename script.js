@@ -178,10 +178,10 @@ document.addEventListener("DOMContentLoaded", () => {
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
             music.pause();
-            musicIcon.className = "bx bx-pause";
+            musicIcon.className = "bx bx-pause-circle";
         } else {
             music.play();
-            musicIcon.className = "bx bx-headphone";
+            musicIcon.className = "bx bx-play-circle";
         }
         isPlaying = !isPlaying;
     });
@@ -222,4 +222,4 @@ copyButtons.forEach((btn) => {
     if (guest) {
         // decode nama agar bisa menampilkan spasi atau simbol dari URL
         guestName.textContent = decodeURIComponent(guest);
-    }
+    };

@@ -217,15 +217,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 20px;
-    right: 20px;
+    background: #29292969;
     width: 50px;
     height: 50px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    bottom: 30px;
+    right: 10px;
+    color: var(--bg);
     border: none;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     cursor: pointer;
     z-index: 999;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -233,7 +233,7 @@ a {
 
 .music-btn:hover {
     transform: scale(1.1);
-    background: rgba(0, 0, 0);
+    background: none;
 }
 
 .container {
@@ -321,7 +321,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0% auto;
+    margin-top: 5px;
     padding: 30px 0;
 }
 
@@ -343,97 +343,89 @@ a {
 
 .card-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 1000px;
 }
 
 .bank-card {
     background: linear-gradient(
         to top right,
-        rgb(236, 192, 141) 10%, 
-        #f8d9b1 50%, 
-        rgb(255, 209, 172) 100%);
+        rgb(196, 196, 196) 10%, 
+        #ffffff 50%, 
+        rgb(221, 221, 221) 100%);
     border-radius: 15px;
     padding: 2px;
-    width: 480px;
-    height: 270px;
+    width: 350px;
+    height: 210px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid rgba(128, 128, 128, 0.384);
     text-align: left;
     position: relative;
 }
 
 .bank-logo {
-    width: 90px;
+    width: 70px;
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 15px;
+    right: 15px;
 }
 
 .nomor {
-    font-size: 17px;
-    color: rgb(75, 55, 0);
+    font-size: 14px;
+    color: rgb(73, 73, 73);
     margin-top: 40px;
     position: relative;
-    top: 47px;
+    top: 0px;
 }
 
 .rekening {
     position: relative;
-    bottom: 40px;
-    font-size: 22px;
+    bottom: 85px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 3px;
 }
 
 .label-nama {
     position: relative;
-    bottom: 132px;
-    font-size: 17px;
-    color: rgb(75, 55, 0);
+    bottom: 165px;
+    font-size: 16px;
+    color: rgb(73, 73, 73);
 }
 
 .nama-rekening {
     position: relative;
-    bottom: 220px;
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--c);
-}
-
-.tanggal {
-    position: relative;
-    font-size: 15px;
-    color: #444;
-    left: 60%;
-    bottom: 365px;
-}
-
-.tanggal span {
-    font-size: 19px;
+    bottom: 250px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--c);
 }
 
 .footer-amplop {
     font-family: 'Great Vibes', cursive;
-    font-size: 32px;
-    margin-top: 40px;
-    color: #3f3d56;
+    text-align: center;
+    justify-content: center;
+    font-size: 62px;
+    margin-top: 30px;
+    color: var(--c);
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 .btn-copy {
     background: #63c76a;
     color: white;
     border: none;
-    padding: 9px 25px;
+    padding: 6px 22px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     margin-top: 5px;
     transition: all 0.2s ease;
     position: relative;
-    left: 78%;
-    bottom: 65%;
+    left: 75%;
+    bottom: 100%;
 }
 
 .btn-copy:hover {
@@ -637,7 +629,7 @@ a {
     height: 380px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
-    border: 1px solid rgba(124, 62, 39, 0.384);
+    border: 2px solid rgba(124, 62, 39, 0.384);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -679,6 +671,18 @@ a {
     margin-bottom: 5px;
 }
 
+.venue-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 300px;
+    border: 2px solid rgba(124, 62, 39, 0.384);
+    box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
+    border-radius: 20px;
+    margin: 20px 0;
+}
 
 .hal-tiga {
     display: flex;
@@ -830,6 +834,15 @@ a {
     height: 150px;
     object-fit: cover;
     transition: transform 0.3s;
+}
+
+.hal-empat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
 }
 
 /* Responsif */
