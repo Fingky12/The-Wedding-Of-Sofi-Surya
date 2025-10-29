@@ -337,8 +337,10 @@ a {
 .desc-amplop {
     font-size: 1rem;
     color: var(--c);
-    margin: 0 auto 10%;
+    margin: 0 auto;
+    margin-bottom: 50px;
     line-height: 1.6;
+    padding: 0 12%;
 }
 
 .card-container {
@@ -608,7 +610,7 @@ a {
 }
 
 .jadwal p {
-    font-size: 1.3rem;
+    font-size: .95rem;
     color: var(--c);
     padding: 0 12%;
     line-height: 1.6;
@@ -843,6 +845,57 @@ a {
     align-items: center;
     width: 100%;
     margin: 20px 0;
+}
+
+.hal-lima {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.comment-box {
+    height: 500px;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.87);
+    border: 2px solid rgba(124, 62, 39, 0.384);
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.comment-box h5 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 /* Responsif */
