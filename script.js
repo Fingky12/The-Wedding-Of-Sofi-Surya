@@ -223,3 +223,144 @@ copyButtons.forEach((btn) => {
         // decode nama agar bisa menampilkan spasi atau simbol dari URL
         guestName.textContent = decodeURIComponent(guest);
     };
+
+
+    // Tabel Komentar
+    const form = document.getElementById('commentForm');
+    const commentList = document.getElementById('commentList');
+    const hadirCount = document.getElementById('hadirCount');
+    const tidakCount = document.getElementById('tidakCount');
+    const raguCount = document.getElementById('raguCount');
+
+    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+    let stats = { hadir: 0, tidak: 0, ragu: 0 };
+
+    comments.forEach(c => {
+    tampilKomentar(c, commentList);
+    stats[c.status]++;
+    });
+    updateCounts();
+
+    form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nama = document.getElementById('nama').value.trim();
+    const pesan = document.getElementById('pesan').value.trim();
+    const status = document.getElementById('status').value;
+
+    if (!nama || !pesan || !status) return;
+
+    const newComment = {
+        id: Date.now(),
+        nama,
+        pesan,
+        status,
+        waktu: Date.now(),
+        replies: []
+    };
+
+    comments.unshift(newComment);
+    saveComments();
+
+    tampilKomentar(newComment, commentList, true);
+    stats[status]++;
+    updateCounts();
+
+    form.reset();
+    });
+
+    function tampilKomentar(c, container, prepend = false) {
+    const div = document.createElement('div');
+    div.className = 'comment';
+    div.innerHTML = `
+        <strong>${c.nama}</strong>
+        <p>${c.pesan}</p>
+        <small>${formatWaktu(c.waktu)} • ${statusLabel(c.status)}</small>
+        <div class="comment-actions">
+        <button class="reply-btn">Balas</button>
+        <button class="delete-btn">Hapus</button>
+        </div>
+    `;
+
+    div.querySelector('.delete-btn').addEventListener('click', () => hapusKomentar(c.id, div));
+    div.querySelector('.reply-btn').addEventListener('click', () => replyKomentar(c.id, div));
+
+    if (c.replies && c.replies.length > 0) {
+        c.replies.forEach(r => tampilReply(r, div));
+    }
+
+    prepend ? container.prepend(div) : container.appendChild(div);
+    }
+
+    function tampilReply(r, parentDiv) {
+    const replyDiv = document.createElement('div');
+    replyDiv.className = 'comment reply';
+    replyDiv.innerHTML = `
+        <strong>${r.nama}</strong>
+        <p>${r.pesan}</p>
+        <small>${formatWaktu(r.waktu)} • Balasan</small>
+        <div class="comment-actions">
+        <button class="delete-btn">Hapus</button>
+        </div>
+    `;
+    replyDiv.querySelector('.delete-btn').addEventListener('click', () => hapusReply(r.id, replyDiv));
+    parentDiv.appendChild(replyDiv);
+    }
+
+    function replyKomentar(id, parentDiv) {
+    const nama = prompt('Nama Anda:');
+    if (!nama) return;
+    const pesan = prompt('Balasan Anda:');
+    if (!pesan) return;
+
+    const reply = { id: Date.now(), nama, pesan, waktu: Date.now() };
+
+    const parentComment = comments.find(c => c.id === id);
+    parentComment.replies.push(reply);
+    saveComments();
+
+    tampilReply(reply, parentDiv);
+    }
+
+    function hapusKomentar(id, div) {
+    if (confirm('Yakin ingin hapus komentar ini?')) {
+        comments = comments.filter(c => c.id !== id);
+        saveComments();
+        div.remove();
+    }
+    }
+
+    function hapusReply(id, div) {
+    comments.forEach(c => {
+        c.replies = c.replies.filter(r => r.id !== id);
+    });
+    saveComments();
+    div.remove();
+    }
+
+    function updateCounts() {
+    hadirCount.textContent = stats.hadir;
+    tidakCount.textContent = stats.tidak;
+    raguCount.textContent = stats.ragu;
+    }
+
+    function saveComments() {
+    localStorage.setItem('comments', JSON.stringify(comments));
+    }
+
+    function statusLabel(status) {
+    return status === 'hadir'
+        ? '✅ Hadir'
+        : status === 'tidak'
+        ? '❌ Tidak Hadir'
+        : '🤔 Ragu';
+    }
+
+    function formatWaktu(time) {
+    const diff = Math.floor((Date.now() - time) / 1000);
+    if (diff < 60) return `${diff} detik lalu`;
+    if (diff < 3600) return `${Math.floor(diff/60)} menit lalu`;
+    if (diff < 86400) return `${Math.floor(diff/3600)} jam lalu`;
+    if (diff < 2592000) return `${Math.floor(diff/86400)} hari lalu`;
+    return `${Math.floor(diff/2592000)} bulan lalu`;
+    }

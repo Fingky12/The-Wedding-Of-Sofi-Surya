@@ -219,30 +219,28 @@
     </div>
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
     <div class="hal-lima">
-      <div class="comment-box">
-        <h3 class="text-center">Komentar & Kehadiran</h3>
+        <div class="comment-box">
+        <h2>Ucapan & Kehadiran</h2>
 
-        <!-- Rangkuman Kehadiran -->
-        <div class="summary">
-          <div class="hadir" id="countHadir">0 Hadir</div>
-          <div class="tidak" id="countTidak">0 Tidak Hadir</div>
-          <div class="ragu" id="countRagu">0 Masih Ragu</div>
+        <div class="stat-box">
+          <div class="stat hadir"><span id="hadirCount">0</span><p>Hadir</p></div>
+          <div class="stat tidak"><span id="tidakCount">0</span><p>Tidak Hadir</p></div>
+          <div class="stat ragu"><span id="raguCount">0</span><p>Ragu</p></div>
         </div>
 
-        <!-- Form input -->
-        <div class="input-group">
-          <input type="text" id="name" placeholder="Nama..." />
-          <textarea id="message" rows="3" placeholder="Tulis ucapan..."></textarea>
-          <select id="status" aria-label="Konfirmasi Kehadiran">
-            <option value="">Konfirmasi Kehadiran</option>
-            <option value="Hadir">✅ Hadir</option>
-            <option value="Tidak Hadir">❌ Tidak Hadir</option>
-            <option value="Masih Ragu">🤔 Masih Ragu</option>
+        <form id="commentForm">
+          <input type="text" id="nama" placeholder="Nama Anda" required>
+          <textarea id="pesan" placeholder="Ucapan Anda" required></textarea>
+          <select id="status" required>
+            <option value="">Pilih Kehadiran</option>
+            <option value="hadir">Hadir</option>
+            <option value="tidak">Tidak Hadir</option>
+            <option value="ragu">Masih Ragu</option>
           </select>
-          <button class="btn-komen" onclick="addComment()">Kirim</button>
-        </div>
+          <button type="submit">Kirim Ucapan</button>
+        </form>
 
-        <div id="comments"></div>
+        <div class="comment-list" id="commentList"></div>
       </div>
     </div>
     
