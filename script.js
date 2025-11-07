@@ -84,59 +84,59 @@ document.getElementById("save").addEventListener("click", () => {
     });
 });
 
-const slider = document.getElementById('slider');
-const dotsContainer = document.getElementById('dots');
-const images = slider.querySelectorAll('img');
+// const slider = document.getElementById('slider');
+// const dotsContainer = document.getElementById('dots');
+// const images = slider.querySelectorAll('img');
 
-let currentIndex = 0;
+// let currentIndex = 0;
 
-// Buat dots sesuai jumlah gambar
-images.forEach((_, i) => {
-    const dot = document.createElement('button');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-});
+// // Buat dots sesuai jumlah gambar
+// images.forEach((_, i) => {
+//     const dot = document.createElement('button');
+//     if (i === 0) dot.classList.add('active');
+//     dot.addEventListener('click', () => goToSlide(i));
+//     dotsContainer.appendChild(dot);
+// });
 
-// Fungsi ke slide tertentu
-function goToSlide(index) {
-    currentIndex = index;
-    const scrollAmount = images[index].offsetLeft - slider.offsetLeft;
-    slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-    updateDots();
-}
+// // Fungsi ke slide tertentu
+// function goToSlide(index) {
+//     currentIndex = index;
+//     const scrollAmount = images[index].offsetLeft - slider.offsetLeft;
+//     slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+//     updateDots();
+// }
 
-// Update warna dot aktif
-function updateDots() {
-    dotsContainer.querySelectorAll('button').forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-    });
-}
+// // Update warna dot aktif
+// function updateDots() {
+//     dotsContainer.querySelectorAll('button').forEach((dot, i) => {
+//         dot.classList.toggle('active', i === currentIndex);
+//     });
+// }
 
-// Tombol prev/next
-document.querySelector('.prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    goToSlide(currentIndex);
-    });
-document.querySelector('.next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    goToSlide(currentIndex);
-});
+// // Tombol prev/next
+// document.querySelector('.prev').addEventListener('click', () => {
+//     currentIndex = (currentIndex - 1 + images.length) % images.length;
+//     goToSlide(currentIndex);
+//     });
+// document.querySelector('.next').addEventListener('click', () => {
+//     currentIndex = (currentIndex + 1) % images.length;
+//     goToSlide(currentIndex);
+// });
 
-// Update dot saat di-scroll manual
-slider.addEventListener('scroll', () => {
-    let closest = 0;
-    let minDiff = Infinity;
-    images.forEach((img, i) => {
-        const diff = Math.abs(slider.scrollLeft - img.offsetLeft);
-        if (diff < minDiff) {
-        minDiff = diff;
-        closest = i;
-        }
-    });
-    currentIndex = closest;
-    updateDots();
-});
+// // Update dot saat di-scroll manual
+// slider.addEventListener('scroll', () => {
+//     let closest = 0;
+//     let minDiff = Infinity;
+//     images.forEach((img, i) => {
+//         const diff = Math.abs(slider.scrollLeft - img.offsetLeft);
+//         if (diff < minDiff) {
+//         minDiff = diff;
+//         closest = i;
+//         }
+//     });
+//     currentIndex = closest;
+//     updateDots();
+// });
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -273,12 +273,12 @@ copyButtons.forEach((btn) => {
     const div = document.createElement('div');
     div.className = 'comment';
     div.innerHTML = `
-        <strong>${c.nama}</strong>
-        <p>${c.pesan}</p>
-        <small>${formatWaktu(c.waktu)} • ${statusLabel(c.status)}</small>
+        <div class="name">${c.nama}</div>
+        <p class="message">${c.pesan}</p>
+        <small class="time">${formatWaktu(c.waktu)} • ${statusLabel(c.status)}</small>
         <div class="comment-actions">
-        <button class="reply-btn">Balas</button>
-        <button class="delete-btn">Hapus</button>
+            <button class="reply-btn">Balas</button>
+            <button class="delete-btn">Hapus</button>
         </div>
     `;
 

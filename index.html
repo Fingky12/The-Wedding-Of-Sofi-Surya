@@ -148,42 +148,6 @@
       </div>
     </div>
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
-    <div class="hal-tiga">
-      <div class="gallery-container">
-        <h1>Our Gallery</h1>
-        <p>“Menciptakan kenangan adalah hadiah yang tak ternilai harganya. Kenangan akan bertahan seumur hidup; benda-benda hanya dalam waktu singkat.”</p>
-        <!-- Slider -->
-        <div class="slider-wrapper">
-          <button class="nav prev">❮</button>
-          <div class="slider" id="slider">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-            <img src="assets/Gambar1.jpg" alt="Gambar">
-          </div>
-          <button class="nav next">❯</button>
-        </div>
-
-        <!-- Dots -->
-        <div class="dots" id="dots"></div>
-
-        <!-- Grid bawah -->
-        <div class="grid-gallery">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-          <img src="assets/Gambar1.jpg" alt="Gambar">
-        </div>
-      </div>
-    </div>
-    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
     <div class="hal-empat">
       <div class="amplop-digital" id="amplop">
         <h2 class="title-amplop">Amplop Digital</h2>
@@ -228,16 +192,17 @@
           <div class="stat ragu"><span id="raguCount">0</span><p>Ragu</p></div>
         </div>
 
-        <form id="commentForm">
+        <form class="commentform" id="commentForm">
           <input type="text" id="nama" placeholder="Nama Anda" required>
           <textarea id="pesan" placeholder="Ucapan Anda" required></textarea>
+          <label for="status">Pilih Status Kehadiran:</label>
           <select id="status" required>
             <option value="">Pilih Kehadiran</option>
             <option value="hadir">Hadir</option>
             <option value="tidak">Tidak Hadir</option>
             <option value="ragu">Masih Ragu</option>
           </select>
-          <button type="submit">Kirim Ucapan</button>
+          <button type="submit" class="btncomment">Kirim Ucapan</button>
         </form>
 
         <div class="comment-list" id="commentList"></div>
