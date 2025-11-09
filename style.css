@@ -17,7 +17,6 @@
 
 html {
     scroll-behavior: smooth;
-    
 }
 
 body {
@@ -36,7 +35,6 @@ body {
 }
 
 h1 {
-    font-size: 95px;
     font-family: "Carattere", cursive;
     color: var(--c);
     font-weight: 400;
@@ -64,7 +62,6 @@ h5 {
     font-weight: 400;
     color: var(--c);
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
-    margin-bottom: 15px;
 }
 
 p {
@@ -128,14 +125,14 @@ a {
 
 .splash-content h1 {
     font-family: "Carattere", cursive;
-    font-size: 8rem;
+    font-size: 10rem;
     color: var(--g);
     margin: 0.5rem 0 4rem 0;
     text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 .splash-content h5 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--g);
     text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
 }
@@ -274,6 +271,7 @@ a {
 }
 
 .title h1 {
+    font-size: 7rem;
     margin: 50px 0 150px 0;
 }
 
@@ -303,7 +301,7 @@ a {
 }
 
 .save-the-date h2 {
-    font-size: 32px;
+    font-size: 2.43rem;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 400;
@@ -375,7 +373,7 @@ a {
 }
 
 .nomor {
-    font-size: 14px;
+    font-size: 1.34rem;
     color: rgb(73, 73, 73);
     margin-top: 40px;
     position: relative;
@@ -385,7 +383,7 @@ a {
 .rekening {
     position: relative;
     bottom: 85px;
-    font-size: 18px;
+    font-size: 1.54rem;
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -393,26 +391,16 @@ a {
 .label-nama {
     position: relative;
     bottom: 165px;
-    font-size: 16px;
+    font-size: 1.54rem;
     color: rgb(73, 73, 73);
 }
 
 .nama-rekening {
     position: relative;
     bottom: 250px;
-    font-size: 16px;
+    font-size: 1.54rem;
     font-weight: bold;
     color: var(--c);
-}
-
-.footer-amplop {
-    font-family: 'Great Vibes', cursive;
-    text-align: center;
-    justify-content: center;
-    font-size: 62px;
-    margin-top: 30px;
-    color: var(--c);
-    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 .btn-copy {
@@ -502,7 +490,7 @@ a {
 }
 
 .kata-Kata h5 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
     font-family: 'Great Vibes', cursive;
 }
@@ -601,7 +589,7 @@ a {
 }
 
 .jadwal h5 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--c);
     margin: 10px 0 40px 0;
     font-weight: 500;
@@ -714,18 +702,11 @@ a {
 .qs-ar-rum h5 {
     font-family: 'Great Vibes', cursive;
     margin: 30px 0 20px 0;
-    font-size: 3rem;
-}
-
-.qs-ar-rum {
-    font-size: 20px;
-    font-style: italic;
-    margin-top: 5px;
-    color: var(--c);
+    font-size: 3.5rem;
 }
 
 .qs-ar-rum p {
-    font-size: 16px;
+    font-size: .95rem;
     color: var(--c);
     margin: 15px 0;
 }
@@ -855,7 +836,6 @@ a {
     width: 100%;
     margin: 20px 0;
 }
-
 
 .comment-box {
   background: linear-gradient(145deg, #e9e9e9, #ffffff);
@@ -1089,9 +1069,9 @@ a {
 }
 
 /* Responsive kecilin aja lingkaran di HP */
-@media (max-width: 768px) {
+@media (max-width: 763px) {
     html {
-        font-size: 70%;
+        font-size: 65%;
     }
     .circle {
         width: 65px;
@@ -1111,16 +1091,16 @@ a {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     html {
-        font-size: 45%;
+        font-size: 55%;
+    }
+    .splash-content {
+        margin: 5%;
     }
     .container {
         width: 95%;
         padding: 2% 0;
-    }
-    .splash-content h1 {
-        font-size: 4rem;
     }
     .jadwal p {
         padding: 0 5%;
@@ -1137,7 +1117,13 @@ a {
 
 @media (max-width: 480px) {
     html {
-        font-size: 40%;
+        font-size: 45%;
+    }
+    .splash-content h1 {
+        font-size: 6rem;
+    }
+    .splash-content h5 {
+        font-size: 1.5rem;
     }
     .circle {
         width: 55px;
@@ -1148,8 +1134,5 @@ a {
     }
     .gallery-grid {
     grid-template-columns: 1fr;
-    }
-    .splash-content h1 {
-        font-size: 4rem;
     }
 }
