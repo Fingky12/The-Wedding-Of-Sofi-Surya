@@ -307,20 +307,45 @@ copyButtons.forEach((btn) => {
     parentDiv.appendChild(replyDiv);
     }
 
+    let currentParentId = null;
+    let currentParentDiv = null;
+
     function replyKomentar(id, parentDiv) {
-    const nama = prompt('Nama Anda:');
-    if (!nama) return;
-    const pesan = prompt('Balasan Anda:');
-    if (!pesan) return;
+    currentParentId = id;
+    currentParentDiv = parentDiv;
+
+    const parentComment = comments.find(c => c.id === id);
+    document.getElementById("replyToName").textContent = `Balasan untuk : ${parentComment.nama}`;
+    document.getElementById("replyNama").value = "";
+    document.getElementById("replyPesan").value = "";
+
+    document.getElementById("replyPopup").style.display = "block";
+    }
+
+    document.getElementById("closePopup").addEventListener("click", () => {
+    document.getElementById("replyPopup").style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+    const popup = document.getElementById("replyPopup");
+    if (e.target === popup) popup.style.display = "none";
+    });
+
+    document.getElementById("sendReplyBtn").addEventListener("click", () => {
+    const nama = document.getElementById("replyNama").value.trim();
+    const pesan = document.getElementById("replyPesan").value.trim();
+    if (!nama || !pesan) return alert("Nama dan balasan tidak boleh kosong!");
 
     const reply = { id: Date.now(), nama, pesan, waktu: Date.now() };
 
-    const parentComment = comments.find(c => c.id === id);
+    const parentComment = comments.find(c => c.id === currentParentId);
     parentComment.replies.push(reply);
     saveComments();
 
-    tampilReply(reply, parentDiv);
-    }
+    tampilReply(reply, currentParentDiv);
+    document.getElementById("replyPopup").style.display = "none";
+    });
+
 
     function hapusKomentar(id, div) {
     if (confirm('Yakin ingin hapus komentar ini?')) {

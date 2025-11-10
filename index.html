@@ -185,7 +185,7 @@
     </div>
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
     <div class="hal-lima">
-        <div class="comment-box">
+      <div class="comment-box">
         <h2>Ucapan & Kehadiran</h2>
 
         <div class="stat-box">
@@ -209,8 +209,20 @@
 
         <div class="comment-list" id="commentList"></div>
       </div>
-    </div>
-    
+      <!-- ==== Tambahan Popup Balasan ==== -->
+      <div class="reply-popup" id="replyPopup">
+        <div class="reply-popup-content">
+          <span class="close-popup" id="closePopup">&times;</span>
+          <h3>Balas Ucapan</h3>
+          <p id="replyToName" class="reply-to-name"></p>
+          <input type="text" id="replyNama" placeholder="Nama Anda">
+          <textarea id="replyPesan" rows="4" placeholder="Tulis balasan di sini..."></textarea>
+          <div class="reply-btn-container">
+            <button id="sendReplyBtn" class="btncomment">Kirim Balasan</button>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
   <script src="script.js"></script>
 </body>
