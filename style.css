@@ -244,7 +244,7 @@ a {
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     width: 90%;
     max-width: 1200px;
-    min-height: 500vh;
+    min-height: 300vh;
     border-radius: 20px;
     opacity: 0;
     overflow: hidden;
@@ -595,13 +595,13 @@ a {
 
 .nama {
     position: relative;
-    top: -150px;
+    top: -190px;
     text-align: center;
     z-index: 3;
 }
 
 .nama h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: normal;
     font-family: "Carattere", cursive;
     color: var(--c);
@@ -610,7 +610,7 @@ a {
 }
 
 .nama h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     font-family: "Source Serif 4", serif;
     color: var(--c);
@@ -618,7 +618,7 @@ a {
 }
 
 .nama h4 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     font-family: "Source Serif 4", serif;
     color: var(--c);

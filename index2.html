@@ -5,28 +5,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Komentar Kehadiran</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bebas+Neue&family=Carattere&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Imperial+Script&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Luxurious+Script&family=Merriweather:opsz,wght@18..144,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tangerine:wght@400;700&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #c5c5c5;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-box {
+    display: flex;
+    justify-content: space-between; /* kiri dan kanan */
+    align-items: center; /* biar sejajar secara vertikal */
+    background: linear-gradient(135deg, #dddddd, #99a6b3);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4d4d4;
+    padding: 10px 40px;
+    text-align: left;
+    width: 450px;
+  }
+
+  .info-card {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #2c2c2c;
+  }
+
+  .info-card p {
+    margin: 30px 0;
+  }
+
+  .rigth-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -8px;
+  }
+
+  .logo-card {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #666;
+  }
+
+  #btnQR {
+    border: none;
+    background-color: #0a4e96;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .btn-copy {
+    border: none;
+    background-color: #0a4e96;
+    color: #fff;
+    padding: 5px 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  .btn-copy:hover, #btnQR:hover {
+    background-color: #084170;
+  }
+
+  img {
+    position: relative;
+    top: 10px;
+    width: 110px;
+  }
+
+  .alert-btnCopy {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    background-color: #4BB543;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    opacity: 0;
+  }
+
+  .alert-btnCopy.show {
+    opacity: 1;
+  }
 
 </style>
 </head>
 <body>
   <div class="card-container">
     <div class="card-box">
-      <div class="no-card">
-        <p></p>
-        <p></p>
+      <div class="info-card">
+        <img src="assets/img/bca.png" alt="BCA Logo">
+        <p><strong>Nomor Rekening</strong><br><span id="rekNumber">123129381037</span></p>
+        <p><strong>Atas Nama</strong><br>Surya Ongky Saputra</p>
       </div>
-      <div class="name-card">
-        <p></p>
-        <p></p>
+      <div class="rigth-side">
+        <div class="logo-card">
+          <img id="qrImage" src="assets/img/qr-bca.png" alt="QR Code" width="100">
+        </div>
+        <button id="btnQR">Download</button>
+        <button class="btn-copy">Salin</button>
       </div>
-      <div class="logo-card"></div>
-      <div class="btn-copy"></div>
-      <div class="allert-btnCopy"></div>
     </div>
+    <div class="alert-btnCopy" id="copyAlert">Nomor rekening berhasil disalin!</div>
   </div>
 <script>
+  // === TOMBOL SALIN ===
+  document.querySelector('.btn-copy').addEventListener('click', function () {
+    const rekening = document.getElementById('rekNumber').innerText.trim();
+    const alertBox = document.getElementById('copyAlert');
+    
+    navigator.clipboard.writeText(rekening)
+      .then(() => {
+        alertBox.textContent = 'Nomor rekening berhasil disalin!';
+        alertBox.classList.add('show');
+        setTimeout(() => alertBox.classList.remove('show'), 2000);
+      })
+      .catch(() => {
+        alertBox.textContent = 'Gagal menyalin nomor rekening!';
+        alertBox.style.color = 'red';
+        alertBox.classList.add('show');
+        setTimeout(() => {
+          alertBox.classList.remove('show');
+          alertBox.style.color = '#2ecc71';
+        }, 2000);
+      });
+  });
 
+  // === TOMBOL DOWNLOAD QR ===
+  document.getElementById('btnQR').addEventListener('click', function () {
+    const qrImg = document.getElementById('qrImage');
+    const link = document.createElement('a');
+    link.href = qrImg.src;
+    link.download = 'QR_BCA.png'; // Nama file saat diunduh
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
 </script>
-
 </body>
 </html>
