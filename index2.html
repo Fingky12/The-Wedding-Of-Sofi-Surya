@@ -32,6 +32,7 @@
     padding: 10px 40px;
     text-align: left;
     width: 450px;
+    overflow: hidden;
   }
 
   .info-card {
@@ -54,30 +55,6 @@
     top: -8px;
   }
 
-  .logo-card {
-    background-color: #eee;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #666;
-  }
-
-  #btnQR {
-    border: none;
-    background-color: #0a4e96;
-    color: #fff;
-    padding: 5px 10px;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
   .btn-copy {
     border: none;
     background-color: #0a4e96;
@@ -89,13 +66,14 @@
     font-size: 1.2rem;
   }
 
-  .btn-copy:hover, #btnQR:hover {
+  .btn-copy:hover {
     background-color: #084170;
   }
 
   img {
     position: relative;
-    top: 10px;
+    top: -70px;
+    right: 0;
     width: 110px;
   }
 
@@ -119,21 +97,29 @@
     opacity: 1;
   }
 
+  .background-logo {
+    position: absolute;
+    top: 490px;
+    left: 920px;
+    width: 500px;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
 </style>
 </head>
 <body>
   <div class="card-container">
     <div class="card-box">
       <div class="info-card">
-        <img src="assets/img/bca.png" alt="BCA Logo">
+        <img src="assets/img/bca.png" alt="BCA Logo" class="background-logo">
         <p><strong>Nomor Rekening</strong><br><span id="rekNumber">123129381037</span></p>
         <p><strong>Atas Nama</strong><br>Surya Ongky Saputra</p>
       </div>
       <div class="rigth-side">
         <div class="logo-card">
-          <img id="qrImage" src="assets/img/qr-bca.png" alt="QR Code" width="100">
+          <img src="assets/img/bca.png" alt="BCA Logo">
         </div>
-        <button id="btnQR">Download</button>
         <button class="btn-copy">Salin</button>
       </div>
     </div>
@@ -160,17 +146,6 @@
           alertBox.style.color = '#2ecc71';
         }, 2000);
       });
-  });
-
-  // === TOMBOL DOWNLOAD QR ===
-  document.getElementById('btnQR').addEventListener('click', function () {
-    const qrImg = document.getElementById('qrImage');
-    const link = document.createElement('a');
-    link.href = qrImg.src;
-    link.download = 'QR_BCA.png'; // Nama file saat diunduh
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   });
 </script>
 </body>
