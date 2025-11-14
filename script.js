@@ -187,32 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// ambil semua tombol salin
-const copyButtons = document.querySelectorAll(".btn-copy");
-
-copyButtons.forEach((btn) => {
-    btn.addEventListener("click", async () => {
-        const noRek = btn.getAttribute("data-rek");
-
-        try {
-        await navigator.clipboard.writeText(noRek);
-
-        // ubah tulisan tombol
-        const originalText = btn.textContent;
-        btn.textContent = "✓ Disalin";
-        btn.classList.add("copied");
-
-        // kembalikan lagi setelah 2 detik
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.classList.remove("copied");
-        }, 2000);
-        } catch (err) {
-        console.error("Gagal menyalin:", err);
-        }
-    });
-});
-
     // ambil parameter "guest" dari URL
     const params = new URLSearchParams(window.location.search);
     const guest = params.get("guest");
