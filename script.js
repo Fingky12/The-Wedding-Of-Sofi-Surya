@@ -363,3 +363,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (diff < 2592000) return `${Math.floor(diff/86400)} hari lalu`;
     return `${Math.floor(diff/2592000)} bulan lalu`;
     }
+
+
+      // === TOMBOL SALIN ===
+    document.querySelector('.btn-copy').addEventListener('click', function () {
+        const rekening = document.getElementById('rekNumber').innerText.trim();
+        const alertBox = document.getElementById('copyAlert');
+        
+        navigator.clipboard.writeText(rekening)
+        .then(() => {
+            alertBox.textContent = 'Nomor rekening berhasil disalin!';
+            alertBox.classList.add('show');
+            setTimeout(() => alertBox.classList.remove('show'), 2000);
+        })
+        .catch(() => {
+            alertBox.textContent = 'Gagal menyalin nomor rekening!';
+            alertBox.style.color = 'red';
+            alertBox.classList.add('show');
+            setTimeout(() => {
+            alertBox.classList.remove('show');
+            alertBox.style.color = '#2ecc71';
+            }, 2000);
+        });
+    });

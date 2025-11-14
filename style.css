@@ -1024,10 +1024,10 @@ a {
     display: flex;
     justify-content: space-between; /* kiri dan kanan */
     align-items: center; /* biar sejajar secara vertikal */
-    background: linear-gradient(135deg, #dddddd, #99a6b3);
+    background: linear-gradient(120deg, #ebebeb, #dfb381);
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d4d4d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #e6e6e6;
     padding: 10px 20px;
     text-align: left;
     width: 452px;
@@ -1036,7 +1036,6 @@ a {
     margin:0 2%;
 }
 
-
   .info-card {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
@@ -1044,7 +1043,7 @@ a {
   }
 
   .info-card p {
-    margin: 20px 0;
+    margin: 25px 0;
     color: #4b4b4b;
   }
 
@@ -1058,13 +1057,14 @@ a {
 
   .btn-copy {
     border: none;
-    background-color: #0a4e96;
+    background-color: #96590a;
     color: #fff;
     padding: 5px 30px;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    z-index: 999;
   }
 
   .btn-copy:hover {
@@ -1083,7 +1083,7 @@ a {
     position: fixed;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-1550%);
     transition: all 0.3s ease;
     background-color: #4BB543;
     color: white;
@@ -1100,20 +1100,19 @@ a {
 
   .CL1 {
     position: absolute;
-    top: 4750px;
-    left: 730px;
+    top: 4690px;
+    left: 265px;
     width: 380px;
     opacity: 0.1;
-    z-index: 1;
   }
 
   .CL2 {
     position: absolute;
-    top: 4750px;
-    left: 1180px;
+    top: 4690px;
+    left: 715px;
     width: 380px;
     opacity: 0.1;
-    z-index: 1;
+    z-index: -1;
   }
 
 
