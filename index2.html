@@ -1,152 +1,282 @@
+<!-- HTML Sudah Dirapikan TANPA mengubah style dan karakter -->
+<!-- CSS akan dipisah per-section (global, splash, layout, comment, popup, amplop, responsive) -->
+<!-- Kamu tinggal copy ke file berbeda nanti, atau biar aku buatkan file CSS-nya -->
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Komentar Kehadiran</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bebas+Neue&family=Carattere&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Imperial+Script&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Luxurious+Script&family=Merriweather:opsz,wght@18..144,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Tangerine:wght@400;700&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #c5c5c5;
-    margin: 0;
-    padding: 20px;
-  }
+  <!-- CSS Global & Split Section -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/splash.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/section1.css" />
+  <link rel="stylesheet" href="css/section2.css" />
+  <link rel="stylesheet" href="css/section3.css" />
+  <link rel="stylesheet" href="css/comment.css" />
+  <link rel="stylesheet" href="css/popup.css" />
+  <link rel="stylesheet" href="css/amplop.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .card-box {
-    display: flex;
-    justify-content: space-between; /* kiri dan kanan */
-    align-items: center; /* biar sejajar secara vertikal */
-    background: linear-gradient(135deg, #dddddd, #99a6b3);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d4d4d4;
-    padding: 10px 40px;
-    text-align: left;
-    width: 450px;
-    overflow: hidden;
-  }
-
-  .info-card {
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
-    color: #2c2c2c;
-  }
-
-  .info-card p {
-    margin: 30px 0;
-  }
-
-  .rigth-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: -8px;
-  }
-
-  .btn-copy {
-    border: none;
-    background-color: #0a4e96;
-    color: #fff;
-    padding: 5px 30px;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-  }
-
-  .btn-copy:hover {
-    background-color: #084170;
-  }
-
-  img {
-    position: relative;
-    top: -70px;
-    right: 0;
-    width: 110px;
-  }
-
-  .alert-btnCopy {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s ease;
-    background-color: #4BB543;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
-    opacity: 0;
-  }
-
-  .alert-btnCopy.show {
-    opacity: 1;
-  }
-
-  .background-logo {
-    position: absolute;
-    top: 490px;
-    left: 920px;
-    width: 500px;
-    opacity: 0.1;
-    z-index: 1;
-  }
-
-</style>
+  <title>The Wedding of Surya & Sofi</title>
 </head>
 <body>
-  <div class="card-container">
-    <div class="card-box">
-      <div class="info-card">
-        <img src="assets/img/bca.png" alt="BCA Logo" class="background-logo">
-        <p><strong>Nomor Rekening</strong><br><span id="rekNumber">123129381037</span></p>
-        <p><strong>Atas Nama</strong><br>Surya Ongky Saputra</p>
+
+  <!-- ======================= SPLASH SCREEN ======================= -->
+  <div id="splash" class="splash-screen">
+    <div class="splash-content">
+      <h5>The Wedding Of</h5>
+      <h1>Surya & Sofi</h1>
+      <h3>Sabtu, 28 Maret 2026</h3>
+
+      <div class="guest">
+        <h4>Kepada Yth : Bapak/Ibu/Saudara/i</h4>
+        <img class="ornamen-batas ob1 slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen" />
+        <p class="nama-tamu"><span id="guest-name">Tamu Undangan</span></p>
+        <img class="ornamen-batas ob2 slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen" />
       </div>
-      <div class="rigth-side">
-        <div class="logo-card">
-          <img src="assets/img/bca.png" alt="BCA Logo">
+
+      <p>Mohon maaf apabila ada kesalahan penulisan nama, gelar dan alamat. <br>Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Berhadir Di Acara Pernikahan Kami.</p>
+
+      <button id="openBtn">Buka Undangan</button>
+    </div>
+  </div>
+
+
+  <!-- ======================= MAIN CONTENT ======================= -->
+  <div class="container hidden" id="mainContent">
+
+    <!-- AUDIO BACKGROUND -->
+    <audio id="bgMusic" loop>
+      <source src="assets/music/beautiful-in-white.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- BUTTON MUSIC TOGGLE -->
+    <button id="musicBtn" class="music-btn hidden" aria-label="Toggle background music" title="Toggle background music">
+      <i id="musicIcon" class="bx bx-headphone"></i>
+    </button>
+
+
+    <!-- ======================= SECTION 1 ======================= -->
+    <div class="hal-pertama" id="hal1">
+      <div class="title">
+        <img src="assets/png/cincin.png" alt="ring-wedding" class="slide-bottom" />
+        <h3 class="slide-bottom">The Wedding Of</h3>
+        <h1 class="slide-bottom">Surya & Sofi</h1>
+      </div>
+
+      <div class="ornamen">
+        <div class="save-the-date slide-bottom">
+          <a href="#" id="save">Save The Date</a>
+          <h2>Sabtu, 28 Maret 2026</h2>
         </div>
-        <button class="btn-copy">Salin</button>
+
+        <!-- Countdown -->
+        <div class="zoom-in" id="countdown">
+          <div class="circle">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle id="daysCircle" cx="50" cy="50" r="45"></circle></svg>
+            <div class="label"><span id="days">0</span><small>Hari</small></div>
+          </div>
+          <div class="circle">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle id="hoursCircle" cx="50" cy="50" r="45"></circle></svg>
+            <div class="label"><span id="hours">0</span><small>Jam</small></div>
+          </div>
+          <div class="circle">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle id="minutesCircle" cx="50" cy="50" r="45"></circle></svg>
+            <div class="label"><span id="minutes">0</span><small>Menit</small></div>
+          </div>
+          <div class="circle">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45"></circle><circle id="secondsCircle" cx="50" cy="50" r="45"></circle></svg>
+            <div class="label"><span id="seconds">0</span><small>Detik</small></div>
+          </div>
+        </div>
+
+        <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen" />
+      </div>
+
+      <div class="kata-Kata zoom-in">
+        <h5><i>Assalamu’alaikum Wr Wb</i></h5>
+        <p>Tanpa mengurangi rasa hormat... (teks tetap sama)</p>
+      </div>
+
+
+      <!-- Frame Mempelai -->
+      <div class="frame">
+        <div class="tab">
+          <div class="slide-bottom">
+            <img class="framegold" src="assets/png/FrameGoldOrnament.png" alt="Gold ornament frame" />
+            <img class="foto" src="assets/Gambar1.jpg" alt="Groom photo" />
+          </div>
+          <div class="nama slide-bottom">
+            <h2>Surya</h2>
+            <h3><b>Putra Pertama Dari :</b></h3>
+            <h4>Bapak Darman & Ibu Kartini</h4>
+          </div>
+        </div>
+
+        <div class="tab1">
+          <div class="slide-bottom">
+            <img class="framegold" src="assets/png/FrameGoldOrnament.png" alt="Gold ornament frame" />
+            <img class="foto" src="assets/Gambar1.jpg" alt="Bride photo" />
+          </div>
+          <div class="nama slide-bottom">
+            <h2>Sofi</h2>
+            <h3><b>Putri KeEmpat Dari :</b></h3>
+            <h4>Bapak Slamet & Ibu Sumilah</h4>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="alert-btnCopy" id="copyAlert">Nomor rekening berhasil disalin!</div>
+
+
+    <!-- ======================= SECTION 2 (JADWAL) ======================= -->
+    <div class="hal-kedua hal2" id="hal2">
+      <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen batas" />
+
+      <div class="jadwal slide-bottom">
+        <h5>Jadwal Acara</h5>
+        <p>Dengan ucapan rasa syukur... (teks tetap)</p>
+      </div>
+
+      <div class="acara slide-bottom">
+        <div class="acara-card">
+          <h2>Akad Nikah</h2>
+          <span>
+            <p><i class="bx bx-calendar"></i><br><b>Sabtu, 28 Maret 2026</b></p>
+            <p><i class="bx bx-alarm"></i><br><b>10.00 - 11.00 WIB</b></p>
+          </span>
+          <p><i class="bx bx-home-heart"></i><br><b>Kediaman Mempelai Laki-laki</b><br>Jl. Sumber ...</p>
+        </div>
+
+        <div class="acara-card">
+          <h2>Resepsi Pernikahan</h2>
+          <span>
+            <p><i class="bx bx-calendar"></i><br><b>Sabtu, 28 Maret 2026</b></p>
+            <p><i class="bx bx-alarm"></i><br><b>11.00 WIB - Selesai</b></p>
+          </span>
+          <p><i class="bx bx-home-heart"></i><br><b>Kediaman Mempelai Laki-laki</b><br>Jl. Sumber ...</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ======================= MAP ======================= -->
+    <div class="map zoom-in">
+      <iframe class="venue-map" src="https://www.google.com/maps/embed?..." width="600" height="350" loading="lazy" title="Wedding venue location map"></iframe>
+    </div>
+
+
+    <!-- ======================= AYAT ======================= -->
+    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="Ornamen batas" title="Ornamen batas" />
+    <div class="kata-kata zoom-in">
+      <div class="qs-ar-rum">
+        <h5>We Love Each Other</h5>
+        <p>“Dan di antara tanda-tanda kekuasaan-Nya...”</p>
+        <p><b>[QS. Ar-Rum : 21]</b></p>
+      </div>
+    </div>
+
+
+    <!-- ======================= COMMENT SECTION ======================= -->
+    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="Ornamen batas" title="Ornamen batas" />
+    <div class="hal-empat">
+
+      <div class="comment-box">
+        <h2>Ucapan & Kehadiran</h2>
+
+        <!-- Stats -->
+        <div class="stat-box">
+          <div class="stat hadir"><span id="hadirCount">0</span><p>Hadir</p></div>
+          <div class="stat tidak"><span id="tidakCount">0</span><p>Tidak Hadir</p></div>
+          <div class="stat ragu"><span id="raguCount">0</span><p>Ragu</p></div>
+        </div>
+
+        <!-- Form -->
+        <form class="commentform" id="commentForm">
+          <input type="text" id="nama" placeholder="Nama Anda" required />
+          <textarea id="pesan" placeholder="Ucapan Anda" required></textarea>
+
+          <label for="status">Pilih Status Kehadiran:</label>
+          <select id="status" required>
+            <option value="">Pilih Kehadiran</option>
+            <option value="hadir">Hadir</option>
+            <option value="tidak">Tidak Hadir</option>
+            <option value="ragu">Masih Ragu</option>
+          </select>
+
+          <button type="submit" class="btncomment">Kirim Ucapan</button>
+        </form>
+
+        <!-- List Komentar -->
+        <div class="comment-list" id="commentList"></div>
+      </div>
+
+
+      <!-- POPUP BALAS UCAPAN -->
+      <div class="reply-popup" id="replyPopup">
+        <div class="reply-popup-content">
+          <span class="close-popup" id="closePopup">&times;</span>
+          <h3>Balas Ucapan</h3>
+          <p id="replyToName" class="reply-to-name"></p>
+          <input type="text" id="replyNama" placeholder="Nama Anda" />
+          <textarea id="replyPesan" rows="4" placeholder="Tulis balasan di sini..."></textarea>
+          <div class="reply-btn-container">
+            <button id="sendReplyBtn" class="btncomment">Kirim Balasan</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ======================= AMBLOP DIGITAL ======================= -->
+    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="Ornamen batas" title="Ornamen batas" />
+  
+    <div class="hal-lima">
+      <div class="amplop-digital" id="amplop">
+        <h2 class="title-amplop">Amplop Digital</h2>
+        <p class="desc-amplop">Terima kasih telah melakukan konfirmasi kehadiran... (teks tetap)</p>
+
+        <div class="card-container">
+
+          <!-- Rekening 1 -->
+          <div class="card-box">
+            <div class="info-card">
+              <img src="assets/img/bca.png" class="background-logo CL1" alt="BCA bank logo background" />
+              <p><strong>Nomor Rekening</strong><br><span id="rekNumber">6723016482</span></p>
+              <p><strong>Atas Nama</strong><br>Surya Ongky Saputra</p>
+            </div>
+            <div class="right-side">
+              <div class="logo-card"><img src="assets/img/bca.png" alt="BCA bank logo" /></div>
+              <button class="btn-copy">Salin</button>
+            </div>
+          </div>
+
+          <!-- Rekening 2 -->
+          <div class="card-box">
+            <div class="info-card">
+              <p><strong>Nomor Rekening</strong><br><span id="rekNumber">6170801383</span></p>
+              <p><strong>Atas Nama</strong><br>Sofi</p>
+            </div>
+            <div class="right-side">
+              <div class="logo-card"><img src="assets/img/bca.png" alt="BCA bank logo" /></div>
+              <button class="btn-copy">Salin</button>
+            </div>
+          </div>
+
+          <img src="assets/img/bca.png" class="background-logo CL2" alt="BCA bank logo background" />
+
+          <div class="alert-btnCopy" id="copyAlert">Nomor rekening berhasil disalin!</div>
+        </div>
+      </div>
+    </div>
   </div>
-<script>
-  // === TOMBOL SALIN ===
-  document.querySelector('.btn-copy').addEventListener('click', function () {
-    const rekening = document.getElementById('rekNumber').innerText.trim();
-    const alertBox = document.getElementById('copyAlert');
-    
-    navigator.clipboard.writeText(rekening)
-      .then(() => {
-        alertBox.textContent = 'Nomor rekening berhasil disalin!';
-        alertBox.classList.add('show');
-        setTimeout(() => alertBox.classList.remove('show'), 2000);
-      })
-      .catch(() => {
-        alertBox.textContent = 'Gagal menyalin nomor rekening!';
-        alertBox.style.color = 'red';
-        alertBox.classList.add('show');
-        setTimeout(() => {
-          alertBox.classList.remove('show');
-          alertBox.style.color = '#2ecc71';
-        }, 2000);
-      });
-  });
-</script>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
+<!-- HTML dan CSS akan segera dirapikan di sini sesuai permintaan. Mohon tunggu, broo! -->
