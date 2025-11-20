@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // === TOMBOL SALIN ===
     document.querySelector('.btn-copy').addEventListener('click', function () {
-        const rekening = document.getElementById('rekNumber').innerText.trim();
+        const rekening = document.getElementById('nomerRek').innerText.trim();
         const alertBox = document.getElementById('copyAlert');
         
         navigator.clipboard.writeText(rekening)

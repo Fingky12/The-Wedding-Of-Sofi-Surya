@@ -1039,7 +1039,7 @@ a {
     color: #4b4b4b;
 }
 
-.rigth-side {
+.right-side {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1056,11 +1056,12 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    z-index: 999;
+    z-index: 9
+    ;
 }
 
 .btn-copy:hover {
-    background-color: #084170;
+    background-color: #b97215;
 }
 
 .logo-card img {
@@ -1073,16 +1074,17 @@ a {
 .alert-btnCopy {
     display: flex;
     position: fixed;
-    bottom: 20px;
+    top: 50px;
     left: 50%;
-    transform: translateX(-1550%);
-    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    transform: translate(-50%);
+    transition: all 0.9s ease;
     background-color: #4BB543;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 13px;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0;
 }
 
@@ -1092,19 +1094,10 @@ a {
 
 .CL1 {
     position: absolute;
-    top: 4690px;
-    left: 265px;
+    top: 4765px;
+    left: 960px;
     width: 380px;
     opacity: 0.1;
-}
-
-.CL2 {
-    position: absolute;
-    top: 4690px;
-    left: 715px;
-    width: 380px;
-    opacity: 0.1;
-    z-index: -1;
 }
 
 

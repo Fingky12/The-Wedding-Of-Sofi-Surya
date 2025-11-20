@@ -276,7 +276,255 @@
   </div>
 
   <!-- SCRIPT -->
-  <script src="script.js"></script>
+  <script>
+
+    /* =====================================================
+   1. SPLASH → SHOW MAIN CONTENT
+===================================================== */
+const splash = document.getElementById("splash");
+const mainContent = document.getElementById("mainContent");
+const openBtn = document.getElementById("openBtn");
+
+openBtn.addEventListener("click", () => {
+    splash.style.opacity = "0";
+    setTimeout(() => {
+        splash.style.display = "none";
+        mainContent.classList.remove("hidden");
+        setTimeout(() => mainContent.classList.add("show"), 50);
+    }, 700);
+});
+
+
+/* =====================================================
+   2. MUSIC BUTTON (Play / Pause)
+===================================================== */
+const musicBtn = document.getElementById("musicBtn");
+const musicIcon = document.getElementById("musicIcon");
+const bgMusic = document.getElementById("bgMusic");
+
+musicBtn.classList.remove("hidden");
+
+musicBtn.addEventListener("click", () => {
+    if (bgMusic.paused) {
+        bgMusic.play();
+        musicIcon.classList.replace("bx-headphone", "bx-pause-circle");
+    } else {
+        bgMusic.pause();
+        musicIcon.classList.replace("bx-pause-circle", "bx-headphone");
+    }
+});
+
+
+/* =====================================================
+   3. ANIMASI SCROLLING (slide-bottom / zoom-in)
+===================================================== */
+const animatedItems = document.querySelectorAll(".slide-bottom, .zoom-in");
+
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add("show");
+        });
+    }, { threshold: 0.2 }
+);
+
+animatedItems.forEach(item => observer.observe(item));
+
+
+/* =====================================================
+   4. SAVE THE DATE DOWNLOAD
+===================================================== */
+document.getElementById("save").addEventListener("click", () => {
+    const imageURL = "assets/save.jpg";  
+    const link = document.createElement("a");
+    link.href = imageURL;
+    link.download = "SaveTheDate.jpg";
+    link.click();
+});
+
+
+/* =====================================================
+   5. COUNTDOWN CALCULATOR
+===================================================== */
+function countdown() {
+    const target = new Date("2026-03-28T10:00:00").getTime();
+    const now = Date.now();
+    const diff = target - now;
+
+    if (diff <= 0) return;
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = d;
+    document.getElementById("hours").innerText = h;
+    document.getElementById("minutes").innerText = m;
+    document.getElementById("seconds").innerText = s;
+
+    const circleLength = 283;
+    document.getElementById("daysCircle").style.strokeDashoffset = circleLength - (d / 365 * circleLength);
+    document.getElementById("hoursCircle").style.strokeDashoffset = circleLength - (h / 24 * circleLength);
+    document.getElementById("minutesCircle").style.strokeDashoffset = circleLength - (m / 60 * circleLength);
+    document.getElementById("secondsCircle").style.strokeDashoffset = circleLength - (s / 60 * circleLength);
+}
+setInterval(countdown, 1000);
+
+
+/* =====================================================
+   6. GUEST NAME VIA URL
+===================================================== */
+const urlParams = new URLSearchParams(window.location.search);
+const guestName = urlParams.get("to");
+
+if (guestName) {
+    document.getElementById("guest-name").innerText = decodeURIComponent(guestName);
+}
+
+
+/* =====================================================
+   7. KOMENTAR SYSTEM + LOCALSTORAGE
+===================================================== */
+let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+const form = document.getElementById("commentForm");
+const commentList = document.getElementById("commentList");
+
+const hadirCount = document.getElementById("hadirCount");
+const tidakCount = document.getElementById("tidakCount");
+const raguCount = document.getElementById("raguCount");
+
+function updateStats() {
+    hadirCount.innerText = comments.filter(c => c.status === "hadir").length;
+    tidakCount.innerText = comments.filter(c => c.status === "tidak").length;
+    raguCount.innerText = comments.filter(c => c.status === "ragu").length;
+}
+
+function renderComments() {
+    commentList.innerHTML = "";
+    comments.forEach((c, index) => {
+        const div = document.createElement("div");
+        div.className = "comment";
+
+        div.innerHTML = `
+            <div class="name">${c.nama}</div>
+            <div class="message">${c.pesan}</div>
+            <div class="time">${c.waktu}</div>
+
+            <div class="comment-actions">
+                <button onclick="openReply(${index})">Balas</button>
+                <button onclick="deleteComment(${index})">Hapus</button>
+            </div>
+
+            ${c.balasan.map(b => `
+                <div class="reply">
+                    <strong>${b.nama}</strong>
+                    <p>${b.pesan}</p>
+                    <small>${b.waktu}</small>
+                </div>
+            `).join("")}
+        `;
+
+        commentList.appendChild(div);
+    });
+}
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const pesan = document.getElementById("pesan").value;
+    const status = document.getElementById("status").value;
+
+    const data = {
+        nama,
+        pesan,
+        status,
+        waktu: new Date().toLocaleString(),
+        balasan: []
+    };
+
+    comments.push(data);
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    form.reset();
+    renderComments();
+    updateStats();
+});
+
+function deleteComment(index) {
+    comments.splice(index, 1);
+    localStorage.setItem("comments", JSON.stringify(comments));
+    renderComments();
+    updateStats();
+}
+
+
+/* =====================================================
+   8. POPUP REPLY SYSTEM
+===================================================== */
+const replyPopup = document.getElementById("replyPopup");
+const closePopup = document.getElementById("closePopup");
+const replyToName = document.getElementById("replyToName");
+let replyIndex = null;
+
+function openReply(i) {
+    replyIndex = i;
+    replyToName.innerText = "Membalas: " + comments[i].nama;
+    replyPopup.style.display = "block";
+}
+
+closePopup.addEventListener("click", () => {
+    replyPopup.style.display = "none";
+});
+
+document.getElementById("sendReplyBtn").addEventListener("click", () => {
+    const nama = document.getElementById("replyNama").value;
+    const pesan = document.getElementById("replyPesan").value;
+
+    if (nama.trim() === "" || pesan.trim() === "") return;
+
+    comments[replyIndex].balasan.push({
+        nama,
+        pesan,
+        waktu: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("comments", JSON.stringify(comments));
+    renderComments();
+
+    replyPopup.style.display = "none";
+    document.getElementById("replyNama").value = "";
+    document.getElementById("replyPesan").value = "";
+});
+
+
+/* =====================================================
+   9. COPY NOMOR REKENING
+===================================================== */
+const copyButtons = document.querySelectorAll(".btn-copy");
+const alertCopy = document.getElementById("copyAlert");
+
+copyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const number = btn.parentElement.parentElement.querySelector("span").innerText;
+
+        navigator.clipboard.writeText(number);
+
+        alertCopy.classList.add("show");
+        setTimeout(() => alertCopy.classList.remove("show"), 1300);
+    });
+});
+
+
+/* =====================================================
+   10. INITIAL RENDER
+===================================================== */
+renderComments();
+updateStats();
+
+  </script>
 </body>
 </html>
 <!-- HTML dan CSS akan segera dirapikan di sini sesuai permintaan. Mohon tunggu, broo! -->
