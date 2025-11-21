@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "hidden";
 
     openBtn.addEventListener("click", () => {
+    
         // Hilangkan splash screen
         splash.style.opacity = "0";
         splash.style.visibility = "hidden";
@@ -178,10 +179,10 @@ document.addEventListener("DOMContentLoaded", () => {
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
             music.pause();
-            musicIcon.className = "bx bx-pause-circle";
+            musicIcon.className = "bx bxs-volume-mute";
         } else {
             music.play();
-            musicIcon.className = "bx bx-play-circle";
+            musicIcon.className = "bx bxs-music";
         }
         isPlaying = !isPlaying;
     });

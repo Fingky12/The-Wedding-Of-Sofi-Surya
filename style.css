@@ -234,6 +234,19 @@ a {
     background: none;
 }
 
+.music-btn .bx {
+    animation: geleng 1.4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes geleng {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-15deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+    }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -243,7 +256,7 @@ a {
     padding: 4% 0;
     background: rgba(255, 255, 255, 0.87);
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
-    width: 90%;
+    width: 90% !important;
     max-width: 1200px;
     min-height: 300vh;
     border-radius: 20px;
@@ -1104,7 +1117,7 @@ a {
 /* Responsif */
 @media (max-width: 959px) {
     html {
-        font-size: 80%;
+        font-size: 90%;
     }
     .container {
         width: 90%;
@@ -1122,14 +1135,18 @@ a {
 /* Responsive kecilin aja lingkaran di HP */
 @media (max-width: 763px) {
     html {
-        font-size: 65%;
+        font-size: 80%;
     }
+    body {
+        zoom: 1 !important; /* hilangkan efek mengecil */
+    }
+
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 95%;
+        width: 85%;
         padding: 2% auto;
         margin: 2% auto;
     }
@@ -1149,17 +1166,21 @@ a {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .info-card {
+        font-size: 1.2rem ;
+        width: 210px;
+    }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 625px) {
     html {
-        font-size: 55%;
+        font-size: 75%;
     }
     .splash-content {
         margin: 5%;
     }
     .container {
-        width: 95%;
+        width: 80%;
         padding: 2% auto;
         margin: 2% auto;
     }
