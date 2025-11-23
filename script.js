@@ -138,7 +138,6 @@ document.getElementById("save").addEventListener("click", () => {
 //     updateDots();
 // });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const splash = document.getElementById("splash");
     const mainContent = document.getElementById("mainContent");
@@ -147,35 +146,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const musicBtn = document.getElementById("musicBtn");
     const musicIcon = document.getElementById("musicIcon");
 
-  // Kunci scroll saat splash tampil
+    // Kunci scroll saat splash tampil
     document.body.style.overflow = "hidden";
 
     openBtn.addEventListener("click", () => {
-    
+
         // Hilangkan splash screen
         splash.style.opacity = "0";
         splash.style.visibility = "hidden";
 
         setTimeout(() => {
-        splash.style.display = "none";
-        mainContent.classList.remove("hidden");
-        mainContent.classList.add("show");
+            splash.style.display = "none";
+            mainContent.classList.remove("hidden");
+            mainContent.classList.add("show");
 
-        // Buka scroll
-        document.body.style.overflow = "auto";
+            // Buka scroll
+            document.body.style.overflow = "auto";
 
-        // Mulai musik
-        music.play().catch(() => {
-            console.log("Musik belum bisa diputar otomatis, tunggu interaksi user");
-        });
-        Music.volume = 1.0;
+            // Mulai musik
+            music.play().catch(() => {
+                console.log("Musik belum bisa diputar otomatis, tunggu interaksi user");
+            });
 
-        // Tampilkan tombol musik
-        musicBtn.classList.remove("hidden");
+            // **Volume musik maksimum**
+            music.volume = 1.0;
+
+            // Tampilkan tombol musik
+            musicBtn.classList.remove("hidden");
         }, 1000);
     });
 
-  // Tombol toggle musik (mute/unmute)
+    // Tombol toggle musik (mute/unmute)
     let isPlaying = true;
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
@@ -184,10 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             music.play();
             musicIcon.className = "bx bxs-music";
+            music.volume = 1.0; // pastikan saat unmute volumenya tetap full
         }
         isPlaying = !isPlaying;
     });
 });
+
 
     // ambil parameter "guest" dari URL
     const params = new URLSearchParams(window.location.search);
