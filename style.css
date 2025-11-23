@@ -1435,88 +1435,98 @@ a {
 
 @media (max-width: 330px) {
     html {
-        font-size: 55%;
+        font-size: 52%;
     }
 
     .ornamen-batas {
-        width: 230px;
+        width: 200px;
     }
     .splash-content h1 {
-        font-size: 8rem;
-        margin-bottom: 35rem;
+        font-size: 6.5rem;
+        margin-bottom: 4rem;
+        line-height: 1.1;
     }
     .splash-content h5 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
     }
 
-    .nama {
-        top: -190px;
-    }
+    /* Nama pengantin */
+    .nama,
     .nama1 {
-        top: -415px;
-    }
-
-    .tab {
-        margin-bottom: 40px;
-    }
-    .tab .framegold {
+        top: unset;
         position: relative;
-        top: -20px;
-        width: 80%;
-        margin-bottom: 20px;
+        margin-top: 1rem;
     }
-    .tab .foto {
-        width: 80px;
-        top: -190px;
-    }
+    /* Foto & frame */
+    .tab,
     .tab1 {
-        margin-bottom: 20px;
-    }
-    .tab1 .framegold {
-        position: relative;
-        top: -250px;
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .tab1 .foto {
-        width: 80px;
-        top: -420px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .jadwal p {
-        padding: 0 2%;
+    .tab .framegold,
+    .tab1 .framegold {
+        width: 75%;
+        margin-bottom: 10px;
+        top: unset;
     }
+
+    .tab .foto,
+    .tab1 .foto {
+        width: 85px;
+        position: relative;
+        top: unset;
+        margin-top: -60px;
+    }
+
+    /* Contoh jadwal */
+    .jadwal p {
+        padding: 0 4%;
+        font-size: 1.1rem;
+    }
+
+    /* Acara */
     .acara {
         flex-direction: column;
+        gap: 10px;
     }
 
     .acara-card {
-        width: 80%;
+        width: 90%;
         height: auto;
     }
 
+    /* Rekening / kotak kartu */
     .card-container {
-        width: 80%;
-    }
-    .card-box {
-        width: 300px;
-        height: auto;
-        padding: 15px 10px;
-    }
-    .info-card {
-        font-size: 1rem ;
-        width: 200px;
+        width: 90%;
     }
 
-    .right-side {
-        top: 15px;
+    .card-box {
+        height: 140px;
+        width: 80%;
+        padding: 15px 12px;
     }
+
+    .info-card {
+        font-size: 1.05rem;
+        width: 80%;
+    }
+
     .logo-card img {
-        width: 70px;
+        width: 60px;
     }
+
     .btn-copy {
-        padding: 5px 20px;
-        font-size: 0.9rem;
+        padding: 6px 18px;
+        font-size: 0.85rem;
+    }
+
+    /* Posisi elemen kanan */
+    .right-side {
+        position: relative;
+        top: 10px;
     }
 }
