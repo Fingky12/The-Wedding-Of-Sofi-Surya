@@ -350,7 +350,7 @@ a {
 }
 
 .desc-amplop {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--c);
     margin: 0 auto;
     margin-bottom: 50px;
@@ -438,8 +438,8 @@ a {
 
 .frame {
     width: 80%;
-    height: 400px;
-    margin: 2rem 0 6rem 0;
+    height: 500px;
+    margin-bottom: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1115,10 +1115,58 @@ a {
 
 
 /* Responsif */
+
+@media (max-width: 1259px) {
+    html {
+        font-size: 95%;
+    }
+
+    .frame {
+        height: 280px;
+        margin-bottom: 110px;
+    }
+
+    .tab .framegold,
+    .tab1 .framegold {
+        width: 350px;
+    }
+
+    .tab .foto,
+    .tab1 .foto {
+        width: 130px;
+        top: -150px;
+    }
+
+    .nama {
+        top: -130px;
+    }
+
+}
 @media (max-width: 959px) {
     html {
         font-size: 90%;
     }
+
+    .frame {
+        height: 250px;
+        margin-bottom: 130px;
+    }
+
+    .tab .framegold,
+    .tab1 .framegold {
+        width: 300px;
+    }
+
+    .tab .foto,
+    .tab1 .foto {
+        width: 110px;
+        top: -115px;
+    }
+
+    .nama {
+        top: -100px;
+    }
+
     .container {
         width: 90%;
         padding: 3% auto;
@@ -1132,13 +1180,76 @@ a {
     }
 }
 
+@media (max-width: 835px) { 
+    html {
+        font-size: 85%;
+    }
+
+    .frame {
+        height: 210px;
+        margin-bottom: 120px;
+    }
+
+    .tab .framegold,
+    .tab1 .framegold {
+        width: 270px;
+    }
+    .tab .foto,
+    .tab1 .foto {
+        width: 100px;
+        top: -98px;
+    }
+}
+
 /* Responsive kecilin aja lingkaran di HP */
 @media (max-width: 763px) {
+
     html {
         font-size: 80%;
     }
     body {
         zoom: 1 !important; /* hilangkan efek mengecil */
+    }
+
+    .frame {
+        height: 220px;
+        margin-bottom: 140px;
+        width: 90%;
+        height: 800px;
+        flex-direction: column;
+        margin-bottom: 170px;
+    }
+    .tab {
+        margin-bottom: 70px;
+    }
+    .tab .framegold {
+        position: relative;
+        top: -80px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .tab .foto {
+        width: 180px;
+        top: -440px;
+    }
+    .tab1 {
+        margin-bottom: 30px;
+    }
+    .tab1 .framegold {
+        position: relative;
+        top: -460px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .tab1 .foto {
+        width: 170px;
+        top: -820px;
+    }
+    .nama {
+        top: -420px;
+    }
+    .nama1 {
+        top: -790px;
     }
 
     .container {
@@ -1172,10 +1283,59 @@ a {
     }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 655px) {
     html {
         font-size: 75%;
     }
+
+    .frame {
+        width: 90%;
+        height: 850px;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .tab {
+        margin-bottom: 70px;
+    }
+
+    .tab .framegold {
+        position: relative;
+        top: -80px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .tab .foto {
+        width: 150px;
+        top: -390px;
+    }
+
+    .tab1 {
+        margin-bottom: 30px;
+    }
+
+    .tab1 .framegold {
+        position: relative;
+        top: -460px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .tab1 .foto {
+        width: 150px;
+        top: -770px;
+    }
+
+    .nama {
+        top: -370px;
+    }
+
+    .nama1 {
+        top: -740px;
+    }
+
+
     .splash-content {
         margin: 5%;
     }
@@ -1194,6 +1354,11 @@ a {
     .map-iframe {
         width: 100%;
         height: 300px;
+    }
+
+    .info-card {
+        font-size: 1.4rem ;
+        width: 320px;
     }
 }
 
