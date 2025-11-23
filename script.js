@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         music.play().catch(() => {
             console.log("Musik belum bisa diputar otomatis, tunggu interaksi user");
         });
+        Music.volume = 1.0;
 
         // Tampilkan tombol musik
         musicBtn.classList.remove("hidden");

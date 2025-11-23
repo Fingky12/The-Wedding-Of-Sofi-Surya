@@ -215,12 +215,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #29292969;
     width: 50px;
     height: 50px;
     bottom: 30px;
     right: 10px;
-    color: var(--bg);
+    color: var(--c);
     border: none;
     border-radius: 50%;
     font-size: 2.5rem;
