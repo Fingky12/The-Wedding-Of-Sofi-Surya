@@ -1371,12 +1371,17 @@ a {
     }
     .splash-content h1 {
         font-size: 9rem;
-        margin-bottom: 40rem;
+        margin-bottom: 21rem;
     }
     .splash-content h5 {
         font-size: 2rem;
         margin-bottom: 3rem;
     }
+
+    .splash-content p {
+        font-size: 1rem;
+    }
+
         /* Buat kartu jadi 1 kolom */
     .acara {
         flex-direction: column;
@@ -1385,15 +1390,24 @@ a {
     }
 
     .acara-card {
-        width: 92%;
+        width: 70%;
         max-width: 350px;
+        height: 350px;
         margin: 0 auto;
     }
 
     /* Judul dalam kartu biar tidak mepet pinggir */
     .acara-card h2 {
-        font-size: 1.6rem;
+        font-size: 3.6rem;
         text-align: center;
+    }
+
+    .acara-card p {
+        font-size: 1.3rem;
+    }
+
+    .acara-card .bx {
+        font-size: 4.5rem;
     }
 
     .frame {
