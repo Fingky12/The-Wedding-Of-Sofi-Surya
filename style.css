@@ -1415,10 +1415,6 @@ a {
         font-size: 1.2rem;
     }
 
-    .acara-card .bx {
-        font-size: 3.5rem;
-    }
-
     .frame {
         width: 90%;
         height: 570px;
@@ -1520,7 +1516,7 @@ a {
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 360px) {
     html {
         font-size: 52%;
     }
