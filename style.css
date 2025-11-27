@@ -1516,6 +1516,65 @@ a {
     }
 }
 
+@media (max-width: 390px) {
+    html {
+        font-size: 55%;
+    }
+
+    .ornamen-batas {
+        width: 220px;
+    }
+    .splash-content h1 {
+        font-size: 7.5rem;
+        margin-bottom: 6rem;
+        line-height: 1.1;
+    }
+    .splash-content h5 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        width: 85%;
+        padding: 2% auto;
+        margin: 1% auto;
+    }
+
+    /* Contoh jadwal */
+    .jadwal p {
+        padding: 0 4%;
+        font-size: 1.2rem;
+    }
+
+    .acara-card h2 {
+        font-size: 1.8rem;
+    }
+    .acara-card p {
+        font-size: 1.3rem;
+    }
+    .card-box {
+        height: 150px;
+        width: 85%;
+        padding: 12px 10px;
+    }
+
+    .info-card {
+        font-size: 1.1rem;
+        width: 280px;
+    }
+    .logo-card img {
+        width: 70px;
+    }
+    .btn-copy {
+        padding: 6px 20px;
+        font-size: 0.9rem;
+    }
+
+    .
+    
+}
+
+
 @media (max-width: 360px) {
     html {
         font-size: 52%;
