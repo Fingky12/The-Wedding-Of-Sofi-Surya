@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ambil parameter "guest" dari URL
     const params = new URLSearchParams(window.location.search);
-    const guest = params.get("guest");
+    const guest = params.get("to");
 
     const guestName = document.getElementById("guest-name");
 
