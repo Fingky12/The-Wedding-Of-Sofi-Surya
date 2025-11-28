@@ -1111,12 +1111,12 @@ a {
     width: 380px;
     opacity: 0.1;
 }
-.footer {
+/* .footer {
     font-family: 'Great Vibes', cursive;
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
     color: #f3f3f3;
-    margin: 120px 0 10px 0;
+    margin: 120px 0 10px 0; */
 }
 
 
@@ -1642,7 +1642,9 @@ a {
         width: 100%;
         margin: 0 auto; 
         padding: 0%;
-        padding-bottom: 20%;
+    }
+    .footer {
+        font-size: 1rem;
     }
     .card-box {
         width: 65%;
