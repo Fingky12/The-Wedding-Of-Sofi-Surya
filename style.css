@@ -1520,6 +1520,39 @@ a {
     html {
         font-size: 55%;
     }
+    .frame {
+        width: 90%;
+        height: 480px;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .tab .framegold {
+        position: relative;
+        top: -30px;
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .tab .foto {
+        width: 90px;
+        top: -220px;
+    }
+    .tab1 .framegold {
+        position: relative;
+        top: -250px;
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    .tab1 .foto {
+        width: 90px;
+        top: -440px;
+    }
+    .nama {
+        top: -210px;
+    }
+    .nama1 {
+        font-size: 1.8rem;
+        top: -430px;
+    }
 
     .ornamen-batas {
         width: 220px;
@@ -1542,12 +1575,21 @@ a {
 
     /* Contoh jadwal */
     .jadwal p {
-        padding: 0 4%;
+        padding: 0 10%;
         font-size: 1.2rem;
     }
 
+    .acara-card {
+        width: 75%;
+        height: 300px;
+        padding: 15% 3%;
+    }
     .acara-card h2 {
-        font-size: 1.8rem;
+        font-size: 3rem;
+    }
+    .acara-card h2::before {
+        top: 32px;
+        width: 100px;
     }
     .acara-card p {
         font-size: 1.3rem;
@@ -1568,115 +1610,5 @@ a {
     .btn-copy {
         padding: 6px 20px;
         font-size: 0.9rem;
-    }
-
-    .
-    
-}
-
-
-@media (max-width: 360px) {
-    html {
-        font-size: 52%;
-    }
-
-    .ornamen-batas {
-        width: 200px;
-    }
-    .splash-content h1 {
-        font-size: 6.5rem;
-        margin-bottom: 4rem;
-        line-height: 1.1;
-    }
-    .splash-content h5 {
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Nama pengantin */
-    .nama,
-    .nama1 {
-        top: unset;
-        position: relative;
-        margin-top: 1rem;
-    }
-    /* Foto & frame */
-    .tab,
-    .tab1 {
-        margin-bottom: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tab .framegold,
-    .tab1 .framegold {
-        width: 75%;
-        margin-bottom: 10px;
-        top: unset;
-    }
-
-    .tab .foto,
-    .tab1 .foto {
-        width: 85px;
-        position: relative;
-        top: unset;
-        margin-top: -60px;
-    }
-
-    /* Contoh jadwal */
-    .jadwal p {
-        padding: 0 4%;
-        font-size: 1.1rem;
-    }
-
-    /* Acara */
-    .acara {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .acara-card {
-        width: 90%;
-        height: auto;
-    }
-
-    .acara-card h2 {
-        font-size: 1.5rem;
-    }
-
-    .acara-card p {
-        font-size: 1.25rem;
-    }
-
-    /* Rekening / kotak kartu */
-    .card-container {
-        width: 90%;
-    }
-
-    .card-box {
-        height: 140px;
-        width: 80%;
-        padding: 15px 12px;
-    }
-
-    .info-card {
-        font-size: 1.05rem;
-        width: 80%;
-    }
-
-    .logo-card img {
-        width: 60px;
-    }
-
-    .btn-copy {
-        padding: 6px 18px;
-        font-size: 0.85rem;
-    }
-
-    /* Posisi elemen kanan */
-    .right-side {
-        position: relative;
-        top: 10px;
     }
 }
