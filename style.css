@@ -251,8 +251,9 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 4% auto;
-    padding: 4% 0;
+    margin: 5% auto;
+    padding: 1% 2%;
+    padding-bottom: 0;
     background: rgba(255, 255, 255, 0.87);
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     width: 90% !important;
@@ -266,16 +267,6 @@ a {
 
 .container.show {
     opacity: 1;
-}
-
-.container .footer {
-    position: relative;
-    bottom: -130px;
-    font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    width: 600px;
-    padding: 5px;
-    color: #5c2c058c;
 }
 
 .hidden {
@@ -995,16 +986,17 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 320px;
+    height: 420px;
     margin: 20px 0;
+    margin-bottom: 60px;
 }
-
 
 .amplop-digital {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .title-amplop {
@@ -1122,12 +1114,19 @@ a {
 }
 
 
+
 /* Responsif */
-@media (max-width: 959px) {
+@media (max-width: 990px) {
     html {
         font-size: 90%;
     }
 
+    .container {
+        width: 80%;
+        padding: 2% auto;
+        margin: 1% auto;
+    }
+    
     .frame {
         height: 250px;
         margin-bottom: 130px;
@@ -1148,16 +1147,33 @@ a {
         top: -100px;
     }
 
-    .container {
-        width: 90%;
-        padding: 3% auto;
-        margin: 2% auto;
+    .acara {
+        flex-wrap: wrap;
+        gap: 25px;
     }
-    .slide {
-        flex: 0 0 calc(100% / 2);
+    .acara-card {
+        width: 35%;
+        height: 460px;
+        padding: 4% auto;
     }
-    .slide img {
-        height: 220px;
+    .acara-card:hover {
+        transform: translateY(-3px);
+    }
+    .acara-card h2 {
+        font-size: 2.4rem;
+    }
+    .acara-card .alamat {
+        padding: 0 3%;
+    }
+
+    .map iframe {
+        max-width: 670px;
+        height: 400px;
+    }
+
+    .amplop-digital {
+        margin-top: 120px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1507,17 +1523,6 @@ a {
         padding: 2% auto;
         margin: 1% auto;
     }
-    
-    .container .footer {
-        position: relative;
-        bottom: -60px;
-        font-family: 'Great Vibes', cursive;
-        font-size: 2rem;
-        width: 600px;
-        padding: 5px;
-        background: var(--c);
-        color: #ffdfdf;
-    }
 
     .title h3{
         font-size: 1.5rem;
@@ -1648,8 +1653,9 @@ a {
         width: 100%;
         height: auto;
     }
-    .map-iframe {
-        height: 250px;
+    .map iframe {
+        width: 90%;
+        height: 150px;
     }
     .card-container {
         width: 100%;
@@ -1662,11 +1668,9 @@ a {
         margin: 0 auto; 
         padding: 0%;
     }
-    .footer {
-        font-size: 1rem;
-    }
+
     .card-box {
-        width: 65%;
+        width: 75%;
         height: 160px;
     }
     .info-card {
