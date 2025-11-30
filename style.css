@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background: url('assets/background.jpg') no-repeat center center fixed;
+    background: url('assets/img/background.jpg') no-repeat center center fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1177,7 +1177,7 @@ a {
     }
 }
 
-@media (max-width: 835px) { 
+@media (max-width: 820px) { 
     html {
         font-size: 85%;
     }
@@ -1196,10 +1196,26 @@ a {
         width: 100px;
         top: -98px;
     }
+
+    .acara-card {
+        width: 40%;
+        height: 430px;
+        padding: 4% auto;
+    }
+
+    .map iframe {
+        max-width: 600px;
+        height: 380px;
+    }
+
+    .amplop-digital {
+
+        max-height: 100vh;
+    }
 }
 
 /* Responsive kecilin aja lingkaran di HP */
-@media (max-width: 763px) {
+@media (max-width: 768px) {
 
     html {
         font-size: 80%;
@@ -1226,7 +1242,7 @@ a {
     }
     .tab .foto {
         width: 180px;
-        top: -440px;
+        top: -435px;
     }
     .tab1 {
         margin-bottom: 30px;
@@ -1239,7 +1255,7 @@ a {
     }
     .tab1 .foto {
         width: 170px;
-        top: -820px;
+        top: -810px;
     }
     .nama {
         top: -420px;
@@ -1276,6 +1292,24 @@ a {
     .info-card {
         font-size: 1.2rem ;
         width: 210px;
+    }
+
+    .acara {
+        gap: 30px;
+    }
+    .acara-card {
+        width: 43%;
+        height: 400px;
+    }
+
+    .map iframe {
+        max-width: 600px;
+        height: 350px;
+    }
+
+    .amplop-digital {
+        margin-top: 30px;
+        margin-bottom: 70px;
     }
 }
 
