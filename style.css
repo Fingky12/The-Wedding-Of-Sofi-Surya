@@ -1429,23 +1429,23 @@ a {
     }
 
     .acara-card {
-        width: 70%;
+        width: 75%;
         max-width: 350px;
         height: 320px;
         margin: 0 auto;
-        padding: 20% 3%;
+        padding: 10% 3%;
     }
 
     /* Judul dalam kartu biar tidak mepet pinggir */
     .acara-card h2 {
         margin: 30px;
-        font-size: 3.3rem;
+        font-size: 3.2rem;
         text-align: center;
     }
 
     .acara-card .alamat {
         margin-bottom: 20px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .frame {
