@@ -1592,7 +1592,7 @@ a {
     }
 
     .acara-card {
-        width: 70%;
+        width: 75%;
         max-width: 460px;
         height: 320px;
         margin: 0 auto;
@@ -1630,8 +1630,8 @@ a {
         margin-bottom: 20px;
     }
     .tab .foto {
-        width: 100px;
-        top: -250px;
+        width: 95px;
+        top: -240px;
     }
     
     .tab1 {
@@ -1644,8 +1644,8 @@ a {
         margin-bottom: 20px;
     }
     .tab1 .foto {
-        width: 100px;
-        top: -510px;
+        width: 95px;
+        top: -500px;
     }
 
     .nama {
