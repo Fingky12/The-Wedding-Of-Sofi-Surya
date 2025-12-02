@@ -79,7 +79,7 @@ const countdown = setInterval(() => {
 
 
 document.getElementById("save").addEventListener("click", () => {
-    document.querySelector(".hal2").scrollIntoView({
+    document.querySelector(".section2").scrollIntoView({
         behavior: "smooth"  // biar scroll halus
     });
 });

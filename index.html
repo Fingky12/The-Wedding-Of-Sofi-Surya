@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/png/favicon2.png">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/splash.css">
   <link rel="stylesheet" href="assets/css/countdown.css">
+  <link rel="stylesheet" href="style.css">
   <title>The Wedding of Surya & Sofi</title>
 </head>
 <body >
-  .
+
+  <!-- splash content -->
   <div id="splash" class="splash-screen">
     <div class="splash-content">
       <h5>The Wedding Of</h5>
@@ -30,7 +31,6 @@
   </div>
 
   <div class="container hidden" id="mainContent">
-
       <!-- Musik -->
     <audio id="bgMusic" loop>
       <source src="assets/mp3/Westlife - Beautiful in White.mp3" type="audio/mpeg">
@@ -41,18 +41,20 @@
       <i id="musicIcon" class='bx bxs-music'></i>
     </button>
 
-    <div class="hal-pertama" id="hal1">
-      <div class="title">
+    <!-- SECTION 1 -->
+    <div class="section1" id="section1">
+
+      <div class="judul">
         <img src="assets/png/cincin.png" alt="ring-wedding" class="slide-bottom">
         <h3 class="slide-bottom">The Wedding Of</h3>
         <h1 class="slide-bottom">Surya & Sofi</h1>
       </div>
-      <div class="ornamen">
+      <div class="save-count">
         <div class="save-the-date slide-bottom">
           <a href="#" id="save">Save The Date</a>
           <h2>Sabtu, 28 Maret 2026</h2>
         </div>
-        <div class="zoom-in" id="countdown">
+        <div class="countdown zoom-in" id="countdown">
           <div class="circle">
             <svg viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="45"></circle>
@@ -113,8 +115,11 @@
           </div>
       </div>
     </div>
-    <div class="hal-kedua hal2" id="hal2">
-      <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
+    <!-- batas ornamen -->
+    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
+    
+    <!-- SECTION 2 -->
+    <div class="section2" id="section2">
       <div class="jadwal slide-bottom">
         <h5>Jadwal Acara</h5>
         <p>Dengan ucapan rasa syukur kepada Tuhan Yang Maha Esa, kami bermaksud untuk mengundang teman, rekan, saudara dan bapak/ibu sekalian untuk hadir pada acara pernikahan kami.</p>
@@ -137,14 +142,27 @@
           <p class="alamat"><i class='bx bx-home-heart'></i><br><b>Kediaman Mempelai Laki-laki,</b><br>Jl. Sumber Bening Gg. Pande, RT.15/RW.02, Kunci, Kec. Dander, Kabupaten Bojonegoro, Jawa Timur</p>
         </div>
       </div>
+      <!-- ornament batas -->
+      <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
+      <div class="lokasi slide-bottom">
+        <h2>Lokasi Acara</h2>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami di hari bahagia kami.</p>
+      <!-- map -->
+      <div class="map zoom-in">
+        <iframe class="venue-map"
+          title="Venue location map"
+          src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d305.01697558336514!2d111.87669819883962!3d-7.262149147845087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e1!4m0!4m3!3m2!1d-7.2622332!2d111.8768628!5e1!3m2!1sid!2sid!4v1761309856669!5m2!1sid!2sid"
+          width="600"
+          height="350"
+          loading="lazy"
+          allowfullscreen >
+        </iframe>
+      </div>
     </div>
-    <div class="map zoom-in">
-      <iframe class="venue-map" title="Venue location map" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d305.01697558336514!2d111.87669819883962!3d-7.262149147845087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e1!4m0!4m3!3m2!1d-7.2622332!2d111.8768628!5e1!3m2!1sid!2sid!4v1761309856669!5m2!1sid!2sid"
-            width="600" 
-            height="350" 
-            loading="lazy" allowfullscreen></iframe>
-    </div>
+
+    <!-- ornament batas -->
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
+      
     <div class="kata-kata zoom-in">
       <div class="qs-ar-rum">
         <h5>We Love Each Other</h5>
@@ -152,11 +170,11 @@
         <p><b>[QS. Ar-Rum : 21]</b></p> 
       </div>
     </div>
-    <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
-    <div class="hal-empat">
+
+    <!-- SECTION 3 -->
+    <div class="section3" id="section3">
       <div class="comment-box">
         <h2>Ucapan & Kehadiran</h2>
-
         <div class="stat-box">
           <div class="stat hadir"><span id="hadirCount">0</span><p>Hadir</p></div>
           <div class="stat tidak"><span id="tidakCount">0</span><p>Tidak Hadir</p></div>
@@ -192,8 +210,9 @@
         </div>
       </div>
     </div>
+    <!-- SECTION 3 -->
     <img class="ornamen-batas slide-bottom" src="assets/png/ornamen-batas.png" alt="ornamen">
-    <div class="hal-lima">
+    <div class="section4" id="section4">
       <div class="amplop-digital" id="amplop">
         <h2 class="title-amplop">Amplop Digital</h2>
         <p class="desc-amplop">

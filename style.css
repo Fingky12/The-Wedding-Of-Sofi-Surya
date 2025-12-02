@@ -44,6 +44,7 @@ h1 {
 h2 {
     font-family: "Carattere", cursive;
     color: var(--c);
+    font-weight: 300;
 }
 
 h3 {
@@ -75,6 +76,168 @@ a {
     color: var(--c);
 }
 
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(112, 1, 1, 0.877);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.splash-content .ornamen-batas {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.splash-content h1 {
+    font-family: "Carattere", cursive;
+    font-size: 10rem;
+    color: var(--g);
+    margin: 0.5rem 0 4rem 0;
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content h5 {
+    font-size: 2rem;
+    color: var(--g);
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content h4 {
+    position: relative;
+    top: 4rem;
+    font-size: 1.1rem;
+    color: var(--g);
+    margin: 0.5rem 0 1rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+.splash-content h3 {
+    position: relative;
+    top: 7rem;
+    font-size: 1.5rem;
+    color: var(--g);
+    margin: 0.5rem 0 1rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content p {
+    font-size: 1.2rem;
+    color: var(--g);
+    margin: 0.25rem 0;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content .nama-tamu {
+    font-size: 3rem;
+    color: var(--g);
+    margin: 0.5rem 0 1rem 0;
+    font-weight: bold;
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content .ob1 {
+    position: relative;
+    top: 2.5rem;
+    width: 20rem;
+    color: var(--g);
+    text-shadow: 0px 7px 3px rgba(0, 0, 0, 0.25);
+}
+
+.splash-content .ob2 {
+    position: relative;
+    top: auto;
+    bottom: 3rem;
+    width: 20rem;
+    color: var(--g);
+}
+
+.splash-content .guest {
+    position: relative;
+    top: 2rem;
+}
+
+.splash-content button {
+    background: var(--g);
+    color: var(--c);
+    border: none;
+    padding: 6px 19px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 2.3rem;
+    transition: background 0.3s;
+    font-family: "Source Serif 4", serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.267);
+}
+
+.splash-content button:hover {
+    background: white;
+    color: var(--c);
+}
+
+/* Countdown */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;   /* biar tetep horisontal */
+    margin: 8px 0 28px;
+    cursor: default;
+}
+
+.circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle circle {
+    fill: none;
+    stroke-width: 8;
+    stroke: rgba(145, 118, 118, 0.226);
+}
+
+.circle circle:nth-child(2) {
+    stroke: var(--c);
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.label span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--c);
+}
+
+.label small {
+    font-size: 0.7rem;
+    color: var(--c);
+}
 
 .slide-bottom {
     opacity: 0;
@@ -151,7 +314,7 @@ a {
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     width: 90% !important;
     max-width: 1200px;
-    min-height: 300vh;
+    min-height: min-content;
     border-radius: 20px;
     opacity: 0;
     overflow: hidden;
@@ -166,20 +329,23 @@ a {
     display: none;
 }
 
-.hal-pertama {
+.section1,
+.section2,
+.section3,
+.section4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: max-content;
+    margin: 40px 0;
 }
 
-.title img {
+.judul img {
     width: 250px;
 }
 
-.title h1 {
+.judul h1 {
     font-size: 7rem;
     margin: 50px 0 150px 0;
 }
@@ -188,10 +354,9 @@ a {
     width: 100%;
     font-family: "Merriweather", serif;
     margin-bottom: 1px;
-
 }
 
-.save-the-date a { 
+.save-the-date a {
     display: inline-block;
     border-radius: 50px;
     padding: 8px 20px;
@@ -223,67 +388,13 @@ a {
     margin: 10px 0 10px 0;
 }
 
-#countdown {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: nowrap;   /* biar tetep horisontal */
-    margin: 8px 0 28px;
-    cursor: default;
-}
-
-.circle {
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.circle svg {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-}
-
-.circle circle {
-    fill: none;
-    stroke-width: 8;
-    stroke: rgba(145, 118, 118, 0.226);
-}
-
-.circle circle:nth-child(2) {
-    stroke: var(--c);
-    stroke-dasharray: 283;
-    stroke-dashoffset: 283;
-    transition: stroke-dashoffset 0.5s linear;
-}
-
-.label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.label span {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--c);
-}
-
-.label small {
-    font-size: 0.7rem;
-    color: var(--c);
-}
-
 .kata-Kata {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 4% 0 -3% 0;
+    margin: 2% 0 -8% 0;
 }
 
 .kata-Kata h5 {
@@ -405,16 +516,6 @@ a {
     color: var(--c);
 }
 
-.hal-dua {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: var(--c);
-}
-
 .jadwal {
     display: flex;
     flex-direction: column;
@@ -526,15 +627,6 @@ a {
     margin: 20px 0;
 }
 
-.hal-tiga {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0;
-}
-
 .map {
     display: flex;
     justify-content: center;
@@ -561,15 +653,6 @@ a {
     font-size: 1.4rem;
     color: var(--c);
     margin: 15px 0;
-}
-
-.hal-empat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0;
 }
 
 .comment-box {
@@ -1209,12 +1292,22 @@ a {
 
 @media (max-width: 655px) {
     html {
-        font-size: 75%;
+        font-size: 70%;
+    }
+
+    .container {
+        width: 80%;
+        padding: 2% auto;
+        margin: 8% auto;
+    }
+
+    .judul {
+        margin-bottom: 75px;
     }
 
     .frame {
         width: 90%;
-        height: 850px;
+        height: 650px;
         flex-direction: column;
         margin-bottom: 50px;
     }
@@ -1231,8 +1324,8 @@ a {
     }
 
     .tab .foto {
-        width: 150px;
-        top: -390px;
+        width: 153px;
+        top: -386px;
     }
 
     .tab1 {
@@ -1247,8 +1340,8 @@ a {
     }
 
     .tab1 .foto {
-        width: 150px;
-        top: -770px;
+        width: 148px;
+        top: -765px;
     }
 
     .nama {
@@ -1262,19 +1355,13 @@ a {
     .splash-content {
         margin: 5%;
     }
-    .container {
-        width: 80%;
-        padding: 2% auto;
-        margin: 2% auto;
-    }
+
     .jadwal p {
         padding: 0 5%;
     }
-    .venue-map {
-        width: 90%;
-        height: auto;
-    }
-    .map-iframe {
+
+    .map iframe {
+        margin: 0 auto;
         width: 100%;
         height: 300px;
     }
@@ -1282,6 +1369,11 @@ a {
     .info-card {
         font-size: 1.4rem ;
         width: 320px;
+    }
+
+    .acara-card {
+        width: 58%;
+        height: 340px;
     }
 }
 
@@ -1291,8 +1383,8 @@ a {
     }
     .container {
         width: 80%;
-        padding: 2% auto;
-        margin: 1% auto;
+        padding: 1% auto;
+        margin: 8% auto;
     }
 
     .splash-content {
@@ -1312,6 +1404,10 @@ a {
 
     .ornamen-batas {
         width: 250px;
+    }
+
+    .judul {
+        margin-bottom: 80px;
     }
 
    /* Buat kartu jadi 1 kolom */
@@ -1343,9 +1439,9 @@ a {
 
     .frame {
         width: 90%;
-        height: 570px;
+        height: 510px;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     .tab {
         margin-bottom: 30px;
@@ -1357,8 +1453,8 @@ a {
         margin-bottom: 20px;
     }
     .tab .foto {
-        width: 110px;
-        top: -260px;
+        width: 105px;
+        top: -255px;
     }
     
     .tab1 {
@@ -1371,8 +1467,8 @@ a {
         margin-bottom: 20px;
     }
     .tab1 .foto {
-        width: 110px;
-        top: -530px;
+        width: 105px;
+        top: -525px;
     }
 
     .nama {
@@ -1444,15 +1540,15 @@ a {
 
 @media (max-width: 412px) {
     html {
-        font-size: 60%;
+        font-size: 55%;
     }
     .container {
         width: 80%;
-        padding: 2% auto;
-        margin: 1% auto;
+        padding: 1% auto;
+        margin: 9% auto;
     }
 
-    .title h3{
+    .title {
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
@@ -1474,7 +1570,7 @@ a {
     }
 
     .ornamen-batas {
-        width: 250px;
+        width: 220px;
     }
 
    /* Buat kartu jadi 1 kolom */
@@ -1509,7 +1605,7 @@ a {
 
     .frame {
         width: 90%;
-        height: 510px;
+        height: 410px;
         flex-direction: column;
         margin-bottom: 50px;
     }
