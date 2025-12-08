@@ -314,7 +314,7 @@ a {
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     width: 90% !important;
     max-width: 1200px;
-    min-height: min-content;
+    height: auto;
     border-radius: 20px;
     opacity: 0;
     overflow: hidden;
@@ -417,38 +417,21 @@ a {
 }
 
 .frame-calon {
-    width: 80%;
-    height: 450px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: default;
-    transition: 0.3s;
-    margin: 0 auto;
-    margin-top: 10px;
-    padding: 0;
-}
-.tab, .tab1 {
-    position: relative;
-    width: 50%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 0;
-    margin: 0 auto;
+    gap: 40px; /* jarak antar foto */
+    margin-top: 20px;
+}
+.frame-box {
+    text-align: center;
 }
 
-.tab .framegold,
-.tab1 .framegold {
-    display: flex;
-    width: 100%;          /* ukuran fix biar sama di semua device */
+.frame-box .framegold {
+    width: 350px;
+    height: auto;
     display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    z-index: 1;
+    margin: 0 auto 10px;
 }
 
 .nama {
@@ -1096,21 +1079,7 @@ a {
     .container {
         width: 80%;
         padding: 2% auto;
-        margin: 1% auto;
-    }
-    
-    .frame {
-        max-height: 355px;
-        margin-bottom: 10px;
-    }
-
-    .tab .framegold,
-    .tab1 .framegold {
-        width: 90%;
-    }
-
-    .nama {
-        top: -100px;
+        margin: 8% auto;
     }
 
     .acara {
@@ -1140,6 +1109,11 @@ a {
     .amplop-digital {
         margin-bottom: 60px;
     }
+
+    .footer {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
 }
 
 /* Responsive kecilin aja lingkaran di HP */
@@ -1152,33 +1126,21 @@ a {
         zoom: 1 !important; /* hilangkan efek mengecil */
     }
 
+    .judul {
+        margin-bottom: 90px;
+    }
     .kata-Kata {
         margin: 2% 0 -5% 0;
-    }
-    .frame {
-        width: 90%;
-        height: 210px;
-        margin: 10px auto;
-        margin-top: 70px;
-        gap: 5px;
-    }
-
-    .tab, .tab1 {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* INI PENTING */
-        text-align: center;
-    }
-
-    .nama {
-        margin-bottom: 50px;      /* Jarak setelah nama */
     }
     .section1,
     .section2,
     .section3,
     .section4 {
         margin: 10px 0;
+    }
+
+    .frame-box .framegold {
+        width: 250px;
     }
 
     .container {
@@ -1188,7 +1150,7 @@ a {
         text-align: center;
         width: 85%;
         padding: 2% auto;
-        margin: 2% auto;
+        margin: 8% auto;
     }
     .circle {
         width: 65px;
@@ -1197,14 +1159,9 @@ a {
     .label span {
         font-size: 1rem;
     }
-    .slide {
-    flex: 0 0 100%;
-    }
-    .slide img {
-        height: 200px;
-    }
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    .card-box {
+        width: 360px;
     }
     .info-card {
         font-size: 1.2rem ;
@@ -1225,19 +1182,22 @@ a {
     }
 
     .amplop-digital {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
 }
 
 @media (max-width: 576px) {
     html {
-        font-size: 70%;
+        font-size: 65%;
+    }
+    body {
+        zoom: 1 !important; /* hilangkan efek mengecil */
     }
     .section1,
     .section2,
     .section3,
     .section4 {
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     .container {
@@ -1246,30 +1206,9 @@ a {
         margin: 8% auto;
     }
 
-    .judul {
-        margin-bottom: 75px;
-    }
-
     .frame {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 320px;
-        max-height: auto;
-        position: relative;  /* aman */
-        gap: 30px;
-        padding: 0;
+        margin: 0 8%;
     }
-
-    .tab, .tab1 {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* INI PENTING */
-        text-align: center;
-    }
-
     .kata-Kata p {
         margin: 2% 0 -7% 0;
     }
@@ -1278,8 +1217,13 @@ a {
         margin: 5%;
     }
 
-    .jadwal p {
-        padding: 0 5%;
+    .frame-calon {
+        flex-direction: column;
+        gap: 25px; /* jarak antar foto */
+        margin-top: 10px;
+    }
+    .frame-box .framegold {
+        width: 320px;
     }
 
     .map iframe {
