@@ -505,7 +505,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 8px 0;
+    margin: 50px 0;
     padding: 1% 3%;
 }
 
@@ -601,13 +601,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2px;
+    padding-top: 40px;
+    margin: 0 5%;
     border-radius: 20px;
 }
 
-.map-iframe {
-    width: 700px;
-    height: 450px;
+.map iframe {
+    width: 900px;
+    height: 350px;
     box-shadow: 0px 2px 8px rgba(105, 105, 105, 0.329);
     border: 1px solid rgba(124, 62, 39, 0.384);
     border-radius: 20px;
@@ -1085,9 +1086,10 @@ a {
         gap: 25px;
     }
     .acara-card {
-        width: 35%;
+        width: 45%;
         height: 460px;
         padding: 4% auto;
+        margin: ;
     }
     .acara-card:hover {
         transform: translateY(-3px);
@@ -1100,7 +1102,7 @@ a {
     }
 
     .map iframe {
-        max-width: 670px;
+        max-width: 570px;
         height: 400px;
     }
 
@@ -1167,16 +1169,19 @@ a {
     }
 
     .acara {
-        gap: 30px;
+        gap: 20px;
     }
     .acara-card {
-        width: 43%;
-        height: 400px;
+        width: 46%;
+        height: 380px;
+    }
+    .acara-card h2 {
+        font-size: 2.3rem;
     }
 
     .map iframe {
-        max-width: 600px;
-        height: 350px;
+        max-width: 470px;
+        height: 250px;
     }
 
     .amplop-digital {
@@ -1243,10 +1248,17 @@ a {
         top: -20px;
     }
 
+    .acara {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
     .acara-card {
         width: 60%;
-        height: 290px;
+        height: 330px;
         padding: 10px 10px;
+        margin: 10px auto;
     }
     .acara-card h2 {
         font-size: 3.2rem;
@@ -1552,40 +1564,6 @@ a {
     html {
         font-size: 55%;
     }
-    .frame {
-        width: 90%;
-        height: 480px;
-        flex-direction: column;
-        margin-bottom: 50px;
-    }
-    .tab .framegold {
-        position: relative;
-        top: -30px;
-        width: 80%;
-        margin-bottom: 15px;
-    }
-    .tab .foto {
-        width: 90px;
-        top: -220px;
-    }
-    .tab1 .framegold {
-        position: relative;
-        top: -250px;
-        width: 80%;
-        margin-bottom: 15px;
-    }
-    .tab1 .foto {
-        width: 90px;
-        top: -440px;
-    }
-    .nama {
-        top: -210px;
-    }
-    .nama1 {
-        font-size: 1.8rem;
-        top: -430px;
-    }
-
     .ornamen-batas {
         width: 220px;
     }
@@ -1604,7 +1582,9 @@ a {
         padding: 2% auto;
         margin: 1% auto;
     }
-
+    .frame-calon .framegold {
+        width: 210px;
+    }
     /* Contoh jadwal */
     .jadwal p {
         padding: 0 10%;
@@ -1627,9 +1607,11 @@ a {
         font-size: 1.3rem;
     }
     .card-box {
-        height: 150px;
-        width: 85%;
-        padding: 12px 10px;
+        height: 130px;
+        width: 72%;
+    }
+    .card-box p {
+        margin: 13px 0;
     }
 
     .info-card {
@@ -1637,7 +1619,8 @@ a {
         width: 280px;
     }
     .logo-card img {
-        width: 70px;
+        width: 60px;
+        top: -10px;
     }
     .btn-copy {
         padding: 6px 20px;
