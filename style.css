@@ -67,8 +67,6 @@ h5 {
 
 p {
     color: var(--c);
-    padding: 0 10%;
-    margin-bottom: 30px;
 }
 
 a {
@@ -388,22 +386,22 @@ a {
     margin: 10px 0 10px 0;
 }
 
-.kata-Kata {
+.pembuka {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 2% 0 -8% 0;
+    margin: 2% 0 2% 0;
 }
 
-.kata-Kata h5 {
+.pembuka h5 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     font-family: 'Great Vibes', cursive;
 }
 
-.kata-Kata p {
+.pembuka p {
     font-size: 1.4rem;
     color: var(--c);
     padding: 0 12%;
@@ -440,7 +438,7 @@ a {
 }
 
 .nama h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: normal;
     font-family: "Carattere", cursive;
     color: var(--c);
@@ -473,7 +471,7 @@ a {
 .jadwal h5 {
     font-size: 3.5rem;
     color: var(--c);
-    margin: 10px 0 40px 0;
+    margin-bottom: 20px;
     font-weight: 500;
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
     font-family: 'Great Vibes', cursive;
@@ -550,8 +548,8 @@ a {
     font-size: 1.1rem;
     color: var(--c);
     line-height: 1.6;
-    margin: 3px 0 0 0;
-    padding: 0 10px;
+    margin: 10px 0 0 0;
+    padding: 0 2px;
     text-align: center;
 }
 
@@ -573,7 +571,7 @@ a {
 .lokasi h5 {
     font-size: 3.5rem;
     color: var(--c);
-    margin: 4px 0 40px 0;
+    margin-bottom: 20px;
     font-weight: 500;
     text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.25);
     font-family: 'Great Vibes', cursive;
@@ -617,14 +615,14 @@ a {
 
 .qs-ar-rum h5 {
     font-family: 'Great Vibes', cursive;
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
     font-size: 3.5rem;
 }
 
 .qs-ar-rum p {
     font-size: 1.4rem;
     color: var(--c);
-    margin: 15px 0;
+    padding: 0 12%;
 }
 
 .comment-box {
@@ -663,7 +661,7 @@ a {
 
 .comment-box h2::after {
     content: "";
-    width: 160px;
+    width: 280px;
     height: 2px;
     background: var(--c);
     display: block;
@@ -1232,14 +1230,67 @@ a {
         height: 300px;
     }
 
+    .card-box {
+        width: 320px;
+        height: 160px;
+    }
     .info-card {
         font-size: 1.4rem ;
         width: 320px;
     }
+    .logo-card img {
+        width: 90px;
+        top: -20px;
+    }
 
     .acara-card {
-        width: 58%;
-        height: 340px;
+        width: 60%;
+        height: 290px;
+        padding: 10px 10px;
+    }
+    .acara-card h2 {
+        font-size: 3.2rem;
+        margin: 6px auto 16px;
+    }
+    .acara-card h2::before {
+        top: 42px;
+        width: 100px;
+    }
+    .acara-card p {
+        font-size: 1.1rem;
+    }
+
+
+
+    .comment-box {
+        width: 80%;
+        padding: 35px 25px;
+    }
+    .comment-box h2 {
+        font-size: 4rem;
+    }
+    .comment-box h2::after {
+        width: 220px;
+    }
+    .stat-box {
+        gap: 15px;
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+    .stat-box .stat {
+        width: 70px;
+        height: 45px;
+    }
+
+    .commentform label {
+        font-size: 13px;
+    }
+    .commentform input,
+    .commentform select {
+        font-size: 13px;
+    }
+    .commentform textarea {
+        height: 80px;
     }
 }
 
@@ -1308,43 +1359,17 @@ a {
         font-size: 3.6rem;
         text-align: center;
     }
-
-    .acara-card .alamat {
-        margin-bottom: 20px;
-        font-size: 1.3rem;
+    .acara-card h2::before {
+        top: 42px;
+        width: 100px;
     }
-
-    .frame {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+    .pembuka p {
+        font-size: 1.4rem;
+        padding: 0 2%;
     }
-
-    /* TAB & TAB1 harus center */
-    .tab, .tab1 {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* INI PENTING */
-        text-align: center;
+    .frame-calon .framegold {
+        width: 260px;
     }
-
-    /* FRAME GOLD (img) */
-    .framegold {
-        width: 150px;          /* ukuran fix biar sama di semua device */
-        display: block;
-        margin: 0 auto;        /* paksa center */
-    }
-
-    /* Nama */
-    .nama {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-
     .circle {
         width: 55px;
         height: 55px;
@@ -1373,16 +1398,6 @@ a {
         height: 45px;
     }
 
-    .lokasi {
-        margin-top: 12px;
-        margin-bottom: 30px;
-    }
-    .lokasi h2 {
-        font-size: 3.5rem;
-    }
-    .lokasi p {
-        font-size: 1.2rem;
-    }
     .venue-map {
         width: 100%;
         height: auto;
@@ -1458,16 +1473,16 @@ a {
 
     .acara-card {
         width: 75%;
-        max-width: 460px;
-        height: 320px;
+        max-width: 340px;
+        height: 270px;
         margin: 0 auto;
-        padding: 20% 3%;
+        padding: 2% 3%;
     }
-
     /* Judul dalam kartu biar tidak mepet pinggir */
     .acara-card h2 {
         font-size: 2.8rem;
         text-align: center;
+        margin: 3%;
     }
     .acara-card h2::before {
         top: 32px;
@@ -1477,60 +1492,6 @@ a {
     .acara-card .alamat {
         margin-bottom: 20px;
         font-size: 1.2rem;
-    }
-
-    .frame {
-        width: 90%;
-        height: 410px;
-        flex-direction: column;
-        margin-bottom: 50px;
-    }
-    .tab {
-        margin-bottom: 30px;
-    }
-    .tab .framegold {
-        position: relative;
-        top: -40px;
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .tab .foto {
-        width: 95px;
-        top: -240px;
-    }
-    
-    .tab1 {
-        margin-bottom: 30px;
-    }
-    .tab1 .framegold {
-        position: relative;
-        top: -300px;
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .tab1 .foto {
-        width: 95px;
-        top: -500px;
-    }
-
-    .nama {
-        top: -240px;
-    }
-
-    .nama1 {
-        font-size: 2rem;
-        top: -495px;
-    }
-
-    .circle {
-        width: 55px;
-        height: 55px;
-    }
-    .label span {
-        font-size: 0.9rem;
-    }
-    .gallery-grid {
-    grid-template-columns: 1fr;
     }
 
     .comment-box {
@@ -1579,7 +1540,7 @@ a {
     }
     .logo-card img {
         width: 80px;
-        top: -30px;
+        top: -15px;
     }
     .btn-copy {
         padding: 6px 20px;
