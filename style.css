@@ -1088,8 +1088,8 @@ a {
     .acara-card {
         width: 45%;
         height: 460px;
-        padding: 4% auto;
-        margin: ;
+        padding: 1% auto;
+        margin: 42px 2px;
     }
     .acara-card:hover {
         transform: translateY(-3px);
@@ -1104,6 +1104,12 @@ a {
     .map iframe {
         max-width: 570px;
         height: 400px;
+    }
+
+    .comment-box {
+        width: 90%;
+        padding: 40px 20px;
+        margin: 40px auto;
     }
 
     .amplop-digital {
