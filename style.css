@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background: url('assets/img/background.jpg') no-repeat center center fixed;
+    background: url('assets/img/BG-wayang-arjuna.webp') no-repeat center center fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
