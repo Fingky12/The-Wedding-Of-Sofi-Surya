@@ -436,6 +436,16 @@ a {
     height: auto;
     display: block;
     margin: 0 auto 10px;
+    z-index: 10;
+}
+.frame-box .framegold.foto {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    width: 124px;
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 50%;
 }
 
 .nama {
@@ -633,7 +643,7 @@ a {
 }
 
 .comment-box {
-    background: linear-gradient(145deg, #e9e9e9, #ffffff);
+    background: linear-gradient(145deg, #fff3e5, rgb(255, 236, 211));
     border: 1px solid #86440f75;
     border-radius: 25px;
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.267);
@@ -688,7 +698,7 @@ a {
     height: 43px;
     text-align: center;
     border-radius: 15px;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: 0.3s;
@@ -980,7 +990,7 @@ a {
     display: flex;
     justify-content: space-between; /* kiri dan kanan */
     align-items: center; /* biar sejajar secara vertikal */
-    background: linear-gradient(120deg, #ebebeb, #dfb381);
+    background: linear-gradient(120deg, #fafafa, #dfb381);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid #e6e6e6;
@@ -1120,6 +1130,17 @@ a {
 
     .amplop-digital {
         margin-bottom: 60px;
+
+    }
+    .card-box {
+        width: 34%;
+        height: 180px;
+    }
+    .info-card p {
+        font-size: .9rem;
+    }
+    .logo-card img {
+    top: -25px;
     }
 
     .footer {
@@ -1196,8 +1217,26 @@ a {
         height: 250px;
     }
 
+
+    .card-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
     .amplop-digital {
         margin-bottom: 40px;
+    }
+    .card-box {
+        width: 55%;
+        height: 180px;
+    }
+    .info-card p {
+        font-size: 1rem;
+    }
+    .logo-card img {
+        width: 80px;
+        top: -25px;
+        right: -2px;
     }
 }
 
@@ -1246,7 +1285,11 @@ a {
         width: 100%;
         height: 300px;
     }
-
+        .card-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
     .card-box {
         width: 320px;
         height: 160px;
@@ -1283,9 +1326,6 @@ a {
     .acara-card p {
         font-size: 1.1rem;
     }
-
-
-
     .comment-box {
         width: 80%;
         padding: 35px 25px;
@@ -1488,6 +1528,14 @@ a {
         width: 220px;
     }
 
+    .frame-box .framegold.foto {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    width: 93px;
+    transform: translateX(-50%);
+    }
+
    /* Buat kartu jadi 1 kolom */
     .acara {
         flex-direction: column;
@@ -1556,11 +1604,14 @@ a {
 
     .card-box {
         width: 75%;
-        height: 160px;
+        height: 140px;
     }
     .info-card {
         font-size: 1.2rem ;
         width: 320px;
+    }
+    .info-card p {
+        margin: 12px 0;
     }
     .logo-card img {
         width: 80px;
