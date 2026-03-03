@@ -1641,6 +1641,9 @@ a {
         font-size: 1.8rem;
         margin-bottom: 2rem;
     }
+    .splash-content .nama-tamu {
+        font-size: 3rem;
+    }
 
     .container {
         width: 85%;
@@ -1690,5 +1693,13 @@ a {
     .btn-copy {
         padding: 6px 20px;
         font-size: 0.9rem;
+    }
+    
+    .frame-box .framegold.foto {
+    position: absolute;
+    left: 50%;
+    top: 27px;
+    width: 75px;
+    transform: translateX(-50%);
     }
 }
