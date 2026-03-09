@@ -763,7 +763,7 @@ a {
 
 .comment-list {
     max-height: 350px;
-    overflow-y: auto;
+    overflow-y: none;
     border-top: 1px solid #eee;
     padding-top: 15px;
     -ms-overflow-style: none;  /* for Internet Explorer and Edge */
@@ -809,12 +809,14 @@ a {
 
 .comment .message {
     position: relative;
-    left: -35px;
+    left: 15px;
     margin: 5px 0;
     color: #222;
 }
 
 .comment .time {
+    position: relative;
+    left: 5px;
     display: block;
     color: #777;
     font-size: .90rem;
@@ -822,6 +824,8 @@ a {
 }
 
 .comment-actions {
+    position: relative;
+    left: 7px;
     display: flex;
     gap: 15px;
     margin-top: 8px;
@@ -856,11 +860,15 @@ a {
 }
 
 .reply p {
+    position: relative;
+    left: 7px;
     margin: 5px 0;
     color: #222;
 }
 
 .reply small {
+    position: relative;
+    left: 5px;
     font-size: .90rem;
     color: #555;
 }
