@@ -1137,10 +1137,10 @@ a {
         height: 180px;
     }
     .info-card p {
-        font-size: .9rem;
+        font-size: 1rem;
     }
     .logo-card img {
-    top: -25px;
+        top: -25px;
     }
 
     .footer {
@@ -1159,6 +1159,30 @@ a {
         zoom: 1 !important; /* hilangkan efek mengecil */
     }
 
+    
+    .splash-content {
+        padding: 3% 0%;
+    }
+    .splash-content h1 {
+        font-size: 7rem;
+        margin-bottom: 9rem;
+    }
+    .splash-content h4 {
+        font-size: 1.4rem;
+    }
+    .splash-content h5 {
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+    .splash-content p {
+        font-size: 1.1rem;
+        padding: 0 11%;
+    }
+    .nama-tamu span {
+        font-size: 3.6rem;
+    }
+
+
     .judul {
         margin-bottom: 90px;
     }
@@ -1172,8 +1196,19 @@ a {
         margin: 10px 0;
     }
 
+    .frame-calon {
+        flex-direction: column;
+    }
+
+    .frame-box .framegold.foto {
+        position: absolute;
+        left: 50%;
+        top: 46px;
+        width: 122px;
+        transform: translateX(-50%);
+    }
     .frame-box .framegold {
-        width: 250px;
+        width: 350px;
     }
 
     .container {
@@ -1192,15 +1227,6 @@ a {
     .label span {
         font-size: 1rem;
     }
-
-    .card-box {
-        width: 360px;
-    }
-    .info-card {
-        font-size: 1.2rem ;
-        width: 210px;
-    }
-
     .acara {
         gap: 20px;
     }
@@ -1216,22 +1242,20 @@ a {
         max-width: 470px;
         height: 250px;
     }
-
-
     .card-container {
         width: 100%;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
     }
     .amplop-digital {
         margin-bottom: 40px;
     }
     .card-box {
-        width: 55%;
+        width: 400px;
         height: 180px;
     }
     .info-card p {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .logo-card img {
         width: 80px;
@@ -1263,12 +1287,31 @@ a {
     .frame {
         margin: 0 8%;
     }
+
     .kata-Kata p {
         margin: 2% 0 -7% 0;
     }
 
     .splash-content {
-        margin: 5%;
+        padding: 3% 0%;
+    }
+    .splash-content h1 {
+        font-size: 9rem;
+        margin-bottom: 9rem;
+    }
+    .splash-content h4 {
+        font-size: 1.5rem;
+    }
+    .splash-content h5 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    .splash-content p {
+        font-size: 1rem;
+        padding: 0 11%;
+    }
+    .nama-tamu span {
+        font-size: 3.4rem;
     }
 
     .frame-calon {
@@ -1276,6 +1319,15 @@ a {
         gap: 25px; /* jarak antar foto */
         margin-top: 10px;
     }
+
+    .frame-box .framegold.foto {
+        position: absolute;
+        left: 50%;
+        top: 42px;
+        width: 112px;
+        transform: translateX(-50%);
+    }
+
     .frame-box .framegold {
         width: 320px;
     }
@@ -1285,18 +1337,18 @@ a {
         width: 100%;
         height: 300px;
     }
-        .card-container {
+    .card-container {
         width: 100%;
         flex-direction: column;
-        gap: 20px;
+        gap: 50px;
     }
     .card-box {
         width: 320px;
         height: 160px;
     }
-    .info-card {
-        font-size: 1.4rem ;
-        width: 320px;
+    .info-card p {
+        margin: 12px;
+        font-size: 1.3rem ;
     }
     .logo-card img {
         width: 90px;
@@ -1372,15 +1424,24 @@ a {
         padding: 3% 0%;
     }
     .splash-content h1 {
-        font-size: 9rem;
+        font-size: 8rem;
         margin-bottom: 9rem;
     }
+
+    .splash-content h4 {
+        font-size: 1.4rem;
+    }
+    
     .splash-content h5 {
         font-size: 2rem;
         margin-bottom: 3rem;
     }
     .splash-content p {
         font-size: 1rem;
+        padding: 0 5%;
+    }
+    .nama-tamu span {
+        font-size: 3.4rem;
     }
 
     .ornamen-batas {
@@ -1431,7 +1492,16 @@ a {
         font-size: 1.4rem;
         padding: 0 2%;
     }
-    .frame-calon .framegold {
+
+    .frame-box .framegold.foto {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    width: 93px;
+    transform: translateX(-50%);
+    }
+
+    .frame-box .framegold {
         width: 260px;
     }
     .circle {
@@ -1469,23 +1539,24 @@ a {
     .map-iframe {
         height: 250px;
     }
+
+
     .card-container {
         width: 100%;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
-
     .card-box {
-        width: 65%;
-        height: 160px;
+        width: 285px;
+        height: 145px;
     }
-    .info-card {
-        font-size: 1.2rem ;
-        width: 320px;
+    .info-card p {
+        margin: 12px 0;
+        font-size: 1.3rem;
     }
     .logo-card img {
         width: 70px;
-        top: -30px;
+        top: -17px;
     }
     .btn-copy {
         padding: 6px 20px;
@@ -1515,12 +1586,16 @@ a {
         font-size: 9rem;
         margin-bottom: 9rem;
     }
+    .splash-content h4 {
+        font-size: 1.3rem;
+    }
     .splash-content h5 {
         font-size: 2rem;
         margin-bottom: 3rem;
     }
     .splash-content p {
         font-size: 1rem;
+        padding: 0 9%;
     }
     .splash-content .nama-tamu {
         font-size: 3.2rem;
@@ -1604,9 +1679,9 @@ a {
         padding: 0%;
     }
 
-    .card-box {
-        width: 75%;
-        height: 140px;
+    .card-container .card-box {
+        width: 265px;
+        height: 135px;
     }
     .info-card {
         font-size: 1.2rem ;
